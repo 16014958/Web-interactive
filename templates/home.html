@@ -2,14 +2,79 @@
 
 
 <head>
-
+  <title>
+  DROPLET
+  </title>
 
 
 <style>
 
+@font-face {
+font-family: 'MavenPro';
+src: url(static/MavenPro-Bold.ttf);
+
+}
+
+
 body{
   background-color: #28353b
 }
+
+/* Fade In */
+
+
+
+  @-webkit-keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  @-moz-keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  .fade-in {
+    opacity: 0; /* make things invisible upon start */
+    -webkit-animation: fadeIn ease-in 1; /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+    -moz-animation: fadeIn ease-in 1;
+    animation: fadeIn ease-in 1;
+
+    -webkit-animation-fill-mode: forwards; /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+    -moz-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+
+    -webkit-animation-duration: 0.3s;
+    -moz-animation-duration: 0.3s;
+    animation-duration: 0.3s;
+  }
+
+  .fade-in.one {
+    -webkit-animation-delay: 0.1s;
+    -moz-animation-delay: 0.1s;
+    animation-delay: 0.1s;
+  }
+
+
+
+
+
+
 
 
 /* Breathing Animation */
@@ -26,8 +91,8 @@ body{
   }
 
   60% {
-    -webkit-transform: scale(1.08);
-    transform: scale(1.08);
+    -webkit-transform: scale(1.03);
+    transform: scale(1.03);
   }
 
   100% {
@@ -38,15 +103,15 @@ body{
 
 @keyframes breathing {
   0% {
-    -webkit-transform: scale(1);
-    -ms-transform: scale(1);
-    transform: scale(1);
+    -webkit-transform: scale(1.03);
+    -ms-transform: scale(1.03);
+    transform: scale(1.03);
   }
 
   25% {
-    -webkit-transform: scale(1.08);
-    -ms-transform: scale(1.08);
-    transform: scale(1.08);
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
   }
 
   60% {
@@ -124,6 +189,7 @@ body{
   background-color: white;
   box-shadow: 0 0 0 #358f87;
   animation: pulse 1s infinite;
+  cursor: pointer;
 }
 
 .title{
@@ -161,8 +227,8 @@ margin-top: 15px;
 
 
 #rain rect{
-  -webkit-animation: breathing 34s  infinite ;
-    animation: breathing 34s  infinite ;
+  -webkit-animation: breathing 54s  infinite ;
+    animation: breathing 54s  infinite ;
     /* -webkit-font-smoothing: antialiased; */
 }
 
@@ -191,7 +257,7 @@ margin-top: 15px;
 
 
 
-<body>
+<body class="fade-in one">
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
 
@@ -291,7 +357,7 @@ margin-top: 15px;
         <p > Rainfall </p>
         <p > Sunshine hrs </p>
         <p > Air Temp </p>
-
+        <p > All </p>
     </div>
 
 </div>
