@@ -11,6 +11,93 @@ body{
   background-color: #28353b
 }
 
+
+/* Breathing Animation */
+
+@-webkit-keyframes breathing {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+
+  25% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+
+  60% {
+    -webkit-transform: scale(1.08);
+    transform: scale(1.08);
+  }
+
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+@keyframes breathing {
+  0% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+
+  25% {
+    -webkit-transform: scale(1.08);
+    -ms-transform: scale(1.08);
+    transform: scale(1.08);
+  }
+
+  60% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+
+  100% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+
+
+
+
+
+/* Pulse Animation */
+
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-box-shadow: 0 0 0 0 rgba(204,169,44, 0.4);
+  }
+  70% {
+      -webkit-box-shadow: 0 0 0 10px rgba(204,169,44, 0);
+  }
+  100% {
+      -webkit-box-shadow: 0 0 0 0 rgba(204,169,44, 0);
+  }
+}
+@keyframes pulse {
+  0% {
+    -moz-box-shadow: 0 0 0 0 #358f87;
+    box-shadow: 0 0 0 0 #358f87;
+  }
+  70% {
+      -moz-box-shadow: 0 0 0 10px #358f87;
+      box-shadow: 0 0 0 10px rgba(204,169,44, 0);
+  }
+  100% {
+      -moz-box-shadow: 0 0 0 0 rgba(204,169,44, 0);
+      box-shadow: 0 0 0 0 rgba(204,169,44, 0);
+  }
+}
+
+
+
+
 .buttons{
   position: absolute;
   top: 200px;
@@ -28,11 +115,15 @@ body{
   border-radius: 35px;
   background-color: #358f87;
   text-align: center;
+  display: block;
+
 }
 
 .buttons p:hover{
   color:  #358f87;
   background-color: white;
+  box-shadow: 0 0 0 #358f87;
+  animation: pulse 1s infinite;
 }
 
 .title{
@@ -50,7 +141,7 @@ h1 {
 }
 
 .months{
-  margin-top: 100px;
+  margin-top: 70px;
   color: white;
   /*width: 400px;*/
   /*position: absolute;
@@ -67,6 +158,33 @@ margin-top: 15px;
 .months h2{
   letter-spacing: 5px;
 }
+
+
+#rain rect{
+  -webkit-animation: breathing 34s  infinite ;
+    animation: breathing 34s  infinite ;
+    /* -webkit-font-smoothing: antialiased; */
+}
+
+
+
+#rain rect:hover{
+  opacity: 0.4;
+}
+
+#Sunshine circle{
+  -webkit-animation: breathing 42s  infinite ;
+    animation: breathing 42s  infinite ;
+}
+
+#Sunshine circle:hover{
+
+  opacity: 0.4;
+
+}
+
+
+
 
 </style>
 </head>
@@ -122,6 +240,18 @@ margin-top: 15px;
       </g>
 
 
+      <g id="temperature">
+
+      </g>
+
+
+      <g id="Humidity">
+
+
+
+      </g>
+
+
 
     </g>
   </svg>
@@ -152,6 +282,16 @@ margin-top: 15px;
         <p > October </p>
         <p > November </p>
         <p > December </p>
+    </div>
+
+
+    <div class="months">
+        <h2 >Measurement </h2>
+        <p > Humidity </p>
+        <p > Rainfall </p>
+        <p > Sunshine hrs </p>
+        <p > Air Temp </p>
+
     </div>
 
 </div>
@@ -188,6 +328,21 @@ document.getElementById('SouthIsland').addEventListener('click', function MoveNZ
 this.style.cursor = 'default';
 });
 
+
+
+
+
+//Humidity
+
+var humidity_line = document.createElementNS('http://www.w3.org/2000/svg','line')
+
+humidity_line.setAttribute('transform', "scale(0.1, 0.1)");
+
+document.getElementById('Humidity').appendChild(humidity_line);
+
+
+
+
 // sunshine
 
 
@@ -208,6 +363,157 @@ sun_circle.setAttribute('r', 10);
 sun_circle.setAttribute('fill', 'none');
 sun_circle.setAttribute('stroke', '#f9ed40');
 sun_circle.setAttribute('stroke-width', 10);
+document.getElementById('sunshine').appendChild(sun_circle);
+
+
+var sun_circle = document.createElementNS('http://www.w3.org/2000/svg','circle')
+sun_circle.setAttribute('cx', 550);
+sun_circle.setAttribute('cy', 820);
+sun_circle.setAttribute('r', 10);
+sun_circle.setAttribute('fill', 'none');
+sun_circle.setAttribute('stroke', '#f9ed40');
+sun_circle.setAttribute('stroke-width', 10);
+document.getElementById('sunshine').appendChild(sun_circle);
+
+
+
+
+var sun_circle = document.createElementNS('http://www.w3.org/2000/svg','circle')
+sun_circle.setAttribute('cx', 500);
+sun_circle.setAttribute('cy', 790);
+sun_circle.setAttribute('r', 9);
+sun_circle.setAttribute('fill', 'none');
+sun_circle.setAttribute('stroke', '#f9ed40');
+sun_circle.setAttribute('stroke-width', 8);
+document.getElementById('sunshine').appendChild(sun_circle);
+
+
+var sun_circle = document.createElementNS('http://www.w3.org/2000/svg','circle')
+sun_circle.setAttribute('cx', 530);
+sun_circle.setAttribute('cy', 740);
+sun_circle.setAttribute('r', 7);
+sun_circle.setAttribute('fill', 'none');
+sun_circle.setAttribute('stroke', '#f9ed40');
+sun_circle.setAttribute('stroke-width', 8);
+document.getElementById('sunshine').appendChild(sun_circle);
+
+
+
+var sun_circle = document.createElementNS('http://www.w3.org/2000/svg','circle')
+sun_circle.setAttribute('cx', 580);
+sun_circle.setAttribute('cy', 770);
+sun_circle.setAttribute('r', 13);
+sun_circle.setAttribute('fill', 'none');
+sun_circle.setAttribute('stroke', '#f9ed40');
+sun_circle.setAttribute('stroke-width', 8);
+document.getElementById('sunshine').appendChild(sun_circle);
+
+
+var sun_circle = document.createElementNS('http://www.w3.org/2000/svg','circle')
+sun_circle.setAttribute('cx', 430);
+sun_circle.setAttribute('cy', 820);
+sun_circle.setAttribute('r', 12);
+sun_circle.setAttribute('fill', 'none');
+sun_circle.setAttribute('stroke', '#f9ed40');
+sun_circle.setAttribute('stroke-width', 8);
+document.getElementById('sunshine').appendChild(sun_circle);
+
+
+
+var sun_circle = document.createElementNS('http://www.w3.org/2000/svg','circle')
+sun_circle.setAttribute('cx', 700);
+sun_circle.setAttribute('cy', 620);
+sun_circle.setAttribute('r', 15);
+sun_circle.setAttribute('fill', 'none');
+sun_circle.setAttribute('stroke', '#f9ed40');
+sun_circle.setAttribute('stroke-width', 8);
+document.getElementById('sunshine').appendChild(sun_circle);
+
+
+
+var sun_circle = document.createElementNS('http://www.w3.org/2000/svg','circle')
+sun_circle.setAttribute('cx', 800);
+sun_circle.setAttribute('cy', 720);
+sun_circle.setAttribute('r', 17);
+sun_circle.setAttribute('fill', 'none');
+sun_circle.setAttribute('stroke', '#f9ed40');
+sun_circle.setAttribute('stroke-width', 8);
+document.getElementById('sunshine').appendChild(sun_circle);
+
+
+
+
+var sun_circle = document.createElementNS('http://www.w3.org/2000/svg','circle')
+sun_circle.setAttribute('cx', 840);
+sun_circle.setAttribute('cy', 600);
+sun_circle.setAttribute('r', 14);
+sun_circle.setAttribute('fill', 'none');
+sun_circle.setAttribute('stroke', '#f9ed40');
+sun_circle.setAttribute('stroke-width', 8);
+document.getElementById('sunshine').appendChild(sun_circle);
+
+
+
+var sun_circle = document.createElementNS('http://www.w3.org/2000/svg','circle')
+sun_circle.setAttribute('cx', 740);
+sun_circle.setAttribute('cy', 500);
+sun_circle.setAttribute('r', 12);
+sun_circle.setAttribute('fill', 'none');
+sun_circle.setAttribute('stroke', '#f9ed40');
+sun_circle.setAttribute('stroke-width', 8);
+document.getElementById('sunshine').appendChild(sun_circle);
+
+
+
+
+var sun_circle = document.createElementNS('http://www.w3.org/2000/svg','circle')
+sun_circle.setAttribute('cx', 740);
+sun_circle.setAttribute('cy', 900);
+sun_circle.setAttribute('r', 12);
+sun_circle.setAttribute('fill', 'none');
+sun_circle.setAttribute('stroke', '#f9ed40');
+sun_circle.setAttribute('stroke-width', 8);
+document.getElementById('sunshine').appendChild(sun_circle);
+
+
+var sun_circle = document.createElementNS('http://www.w3.org/2000/svg','circle')
+sun_circle.setAttribute('cx', 440);
+sun_circle.setAttribute('cy', 1050);
+sun_circle.setAttribute('r', 12);
+sun_circle.setAttribute('fill', 'none');
+sun_circle.setAttribute('stroke', '#f9ed40');
+sun_circle.setAttribute('stroke-width', 8);
+document.getElementById('sunshine').appendChild(sun_circle);
+
+
+
+
+var sun_circle = document.createElementNS('http://www.w3.org/2000/svg','circle')
+sun_circle.setAttribute('cx', 360);
+sun_circle.setAttribute('cy', 980);
+sun_circle.setAttribute('r', 12);
+sun_circle.setAttribute('fill', 'none');
+sun_circle.setAttribute('stroke', '#f9ed40');
+sun_circle.setAttribute('stroke-width', 8);
+document.getElementById('sunshine').appendChild(sun_circle);
+
+
+var sun_circle = document.createElementNS('http://www.w3.org/2000/svg','circle')
+sun_circle.setAttribute('cx', 390);
+sun_circle.setAttribute('cy', 1100);
+sun_circle.setAttribute('r', 14);
+sun_circle.setAttribute('fill', 'none');
+sun_circle.setAttribute('stroke', '#f9ed40');
+sun_circle.setAttribute('stroke-width', 12);
+document.getElementById('sunshine').appendChild(sun_circle);
+
+var sun_circle = document.createElementNS('http://www.w3.org/2000/svg','circle')
+sun_circle.setAttribute('cx', 370);
+sun_circle.setAttribute('cy', 1150);
+sun_circle.setAttribute('r', 8);
+sun_circle.setAttribute('fill', 'none');
+sun_circle.setAttribute('stroke', '#f9ed40');
+sun_circle.setAttribute('stroke-width', 12);
 document.getElementById('sunshine').appendChild(sun_circle);
 
 
@@ -366,6 +672,156 @@ document.getElementById('sunshine').appendChild(sun_circle);
     r_rect.setAttribute('stroke', '#315f87');
     r_rect.setAttribute('stroke-width', 10);
     document.getElementById('rain').appendChild(r_rect);
+
+
+    var r_rect = document.createElementNS('http://www.w3.org/2000/svg','rect')
+    r_rect.setAttribute('x', -40);
+    r_rect.setAttribute('y', 1310);
+    r_rect.setAttribute('width', 10);
+    r_rect.setAttribute('height', 10);
+    r_rect.setAttribute('fill', 'none');
+    r_rect.setAttribute('stroke', '#315f87');
+    r_rect.setAttribute('stroke-width', 7);
+    document.getElementById('rain').appendChild(r_rect);
+
+
+
+    var r_rect = document.createElementNS('http://www.w3.org/2000/svg','rect')
+    r_rect.setAttribute('x', 0);
+    r_rect.setAttribute('y', 1310);
+    r_rect.setAttribute('width', 15);
+    r_rect.setAttribute('height', 15);
+    r_rect.setAttribute('fill', 'none');
+    r_rect.setAttribute('stroke', '#315f87');
+    r_rect.setAttribute('stroke-width', 9);
+    document.getElementById('rain').appendChild(r_rect);
+
+
+    var r_rect = document.createElementNS('http://www.w3.org/2000/svg','rect')
+    r_rect.setAttribute('x', 30);
+    r_rect.setAttribute('y', 1290);
+    r_rect.setAttribute('width', 13);
+    r_rect.setAttribute('height', 13);
+    r_rect.setAttribute('fill', 'none');
+    r_rect.setAttribute('stroke', '#315f87');
+    r_rect.setAttribute('stroke-width', 9);
+    document.getElementById('rain').appendChild(r_rect);
+
+
+    var r_rect = document.createElementNS('http://www.w3.org/2000/svg','rect')
+    r_rect.setAttribute('x', 50);
+    r_rect.setAttribute('y', 1260);
+    r_rect.setAttribute('width', 18);
+    r_rect.setAttribute('height', 18);
+    r_rect.setAttribute('fill', 'none');
+    r_rect.setAttribute('stroke', '#315f87');
+    r_rect.setAttribute('stroke-width', 13);
+    document.getElementById('rain').appendChild(r_rect);
+
+
+    var r_rect = document.createElementNS('http://www.w3.org/2000/svg','rect')
+    r_rect.setAttribute('x', 130);
+    r_rect.setAttribute('y', 1280);
+    r_rect.setAttribute('width', 18);
+    r_rect.setAttribute('height', 18);
+    r_rect.setAttribute('fill', 'none');
+    r_rect.setAttribute('stroke', '#315f87');
+    r_rect.setAttribute('stroke-width', 10);
+    document.getElementById('rain').appendChild(r_rect);
+
+
+    var r_rect = document.createElementNS('http://www.w3.org/2000/svg','rect')
+    r_rect.setAttribute('x', 50);
+    r_rect.setAttribute('y', 1150);
+    r_rect.setAttribute('width', 18);
+    r_rect.setAttribute('height', 18);
+    r_rect.setAttribute('fill', 'none');
+    r_rect.setAttribute('stroke', '#315f87');
+    r_rect.setAttribute('stroke-width', 13);
+    document.getElementById('rain').appendChild(r_rect);
+
+
+    var r_rect = document.createElementNS('http://www.w3.org/2000/svg','rect')
+    r_rect.setAttribute('x', 10);
+    r_rect.setAttribute('y', 1180);
+    r_rect.setAttribute('width', 18);
+    r_rect.setAttribute('height', 18);
+    r_rect.setAttribute('fill', 'none');
+    r_rect.setAttribute('stroke', '#315f87');
+    r_rect.setAttribute('stroke-width', 13);
+    document.getElementById('rain').appendChild(r_rect);
+
+
+        var r_rect = document.createElementNS('http://www.w3.org/2000/svg','rect')
+        r_rect.setAttribute('x', 70);
+        r_rect.setAttribute('y', 1130);
+        r_rect.setAttribute('width', 14);
+        r_rect.setAttribute('height', 14);
+        r_rect.setAttribute('fill', 'none');
+        r_rect.setAttribute('stroke', '#315f87');
+        r_rect.setAttribute('stroke-width', 11);
+        document.getElementById('rain').appendChild(r_rect);
+
+
+        var r_rect = document.createElementNS('http://www.w3.org/2000/svg','rect')
+        r_rect.setAttribute('x', 110);
+        r_rect.setAttribute('y', 1130);
+        r_rect.setAttribute('width', 8);
+        r_rect.setAttribute('height', 8);
+        r_rect.setAttribute('fill', 'none');
+        r_rect.setAttribute('stroke', '#315f87');
+        r_rect.setAttribute('stroke-width', 4);
+        document.getElementById('rain').appendChild(r_rect);
+
+
+
+        var r_rect = document.createElementNS('http://www.w3.org/2000/svg','rect')
+        r_rect.setAttribute('x', 130);
+        r_rect.setAttribute('y', 1100);
+        r_rect.setAttribute('width', 19);
+        r_rect.setAttribute('height', 19);
+        r_rect.setAttribute('fill', 'none');
+        r_rect.setAttribute('stroke', '#315f87');
+        r_rect.setAttribute('stroke-width', 13);
+        document.getElementById('rain').appendChild(r_rect);
+
+
+
+        var r_rect = document.createElementNS('http://www.w3.org/2000/svg','rect')
+        r_rect.setAttribute('x', -300);
+        r_rect.setAttribute('y', 1300);
+        r_rect.setAttribute('width', 19);
+        r_rect.setAttribute('height', 19);
+        r_rect.setAttribute('fill', 'none');
+        r_rect.setAttribute('stroke', '#315f87');
+        r_rect.setAttribute('stroke-width', 13);
+        document.getElementById('rain').appendChild(r_rect);
+
+
+        var r_rect = document.createElementNS('http://www.w3.org/2000/svg','rect')
+        r_rect.setAttribute('x', -200);
+        r_rect.setAttribute('y', 1200);
+        r_rect.setAttribute('width', 10);
+        r_rect.setAttribute('height', 10);
+        r_rect.setAttribute('fill', 'none');
+        r_rect.setAttribute('stroke', '#315f87');
+        r_rect.setAttribute('stroke-width', 6);
+        document.getElementById('rain').appendChild(r_rect);
+
+
+        var r_rect = document.createElementNS('http://www.w3.org/2000/svg','rect')
+        r_rect.setAttribute('x', -150);
+        r_rect.setAttribute('y', 800);
+        r_rect.setAttribute('width', 11);
+        r_rect.setAttribute('height', 11);
+        r_rect.setAttribute('fill', 'none');
+        r_rect.setAttribute('stroke', '#315f87');
+        r_rect.setAttribute('stroke-width', 6);
+        document.getElementById('rain').appendChild(r_rect);
+
+
+
+
 
 
 
