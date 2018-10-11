@@ -392,8 +392,31 @@ svg{
       </g>
 
 
-      <g id="temperature">
-
+      <g id="temperature" transform="scale(0.5 0.5) translate(100, 400)">
+        <g>
+        	<g>
+        		<path class="st0" d="M172.6,196.2c65.7,0,131.4,0,197.2,0c3.2,0,3.2-5,0-5c-65.7,0-131.4,0-197.2,0
+        			C169.4,191.2,169.4,196.2,172.6,196.2L172.6,196.2z"/>
+        	</g>
+        </g>
+        <g>
+        	<g>
+        		<path class="st0" d="M118,235.2c101,0,202,0,302.9,0c28.6,0,57.1,0,85.7,0c3.2,0,3.2-5,0-5c-101,0-202,0-302.9,0
+        			c-28.6,0-57.1,0-85.7,0C114.8,230.2,114.8,235.2,118,235.2L118,235.2z"/>
+        	</g>
+        </g>
+        <g>
+        	<g>
+        		<path class="st0" d="M187.5,265.7c75.9,0,151.7,0,227.6,0c21.5,0,43.1,0,64.6,0c3.2,0,3.2-5,0-5c-75.9,0-151.7,0-227.6,0
+        			c-21.5,0-43.1,0-64.6,0C184.3,260.7,184.3,265.7,187.5,265.7L187.5,265.7z"/>
+        	</g>
+        </g>
+        <g>
+        	<g>
+        		<path class="st0" d="M253.4,301.2c62.2,0,124.3,0,186.5,0c3.2,0,3.2-5,0-5c-62.2,0-124.3,0-186.5,0
+        			C250.2,296.2,250.2,301.2,253.4,301.2L253.4,301.2z"/>
+        	</g>
+        </g>
       </g>
 
 
@@ -467,8 +490,19 @@ svg{
   // TweenMax.to('#NZ', 1, {x:60, y:-40});
 
 
-  document.getElementById('NorthIsland').addEventListener('click', function MoveNZ(){
+
+function hideNelsons() {
+  nelsons = document.querySelectorAll('.nelson');
+
+  nelsons.forEach(function(n) {
+    n.style.opacity=0
+  })
+}
+
+
+document.getElementById('NorthIsland').addEventListener('click', function MoveNZ(){
   TweenMax.to('#everything', 0.8, {x:-125, y:120});
+  hideNelsons();
   // TweenMax.to('#rain', 0.5, {x:285, y:240});
   // this.removeEventListener('click', MoveNZ);
   this.style.cursor = 'default';
@@ -499,15 +533,49 @@ document.getElementById('Humidity').appendChild(humidity_line);
 
 // sunshine
 
+sunshine = []
 
+function drawSunshine() {
+  for (var i=0; i <sunshine.length; i++) {
+    var sun_circle = document.createElementNS('http://www.w3.org/2000/svg','circle')
+    sun_circle.setAttribute('class', 'nelson');
+    sun_circle.setAttribute('cx', sunshine[i][2]);
+    sun_circle.setAttribute('cy', sunshine[i][3]);
+    sun_circle.setAttribute('r', sunshine[i][4]/5);
+    sun_circle.setAttribute('fill', 'none'); //
+    sun_circle.setAttribute('stroke', '#f9ed40'); //
+    sun_circle.setAttribute('stroke-width', 10); //
+    document.getElementById('sunshine').appendChild(sun_circle); //
+  }
+}
+
+// fetches data
+var req = new XMLHttpRequest();
+req.onreadystatechange = function() {
+  if (this.readyState == 4 && this.status == 200) {
+    sunshine = JSON.parse(req.responseText);
+    drawSunshine();
+  }
+  else {
+      console.log(this.readyState, this.status);
+  }
+};
+req.open('GET', '/scores');
+req.send();
+
+
+
+
+
+/*
 var sun_circle = document.createElementNS('http://www.w3.org/2000/svg','circle')
 sun_circle.setAttribute('cx', 600);
 sun_circle.setAttribute('cy', 320);
 sun_circle.setAttribute('r', 10);
-sun_circle.setAttribute('fill', 'none');
-sun_circle.setAttribute('stroke', '#f9ed40');
-sun_circle.setAttribute('stroke-width', 10);
-document.getElementById('sunshine').appendChild(sun_circle);
+sun_circle.setAttribute('fill', 'none'); //
+sun_circle.setAttribute('stroke', '#f9ed40'); //
+sun_circle.setAttribute('stroke-width', 10); //
+document.getElementById('sunshine').appendChild(sun_circle); //
 
 
 var sun_circle = document.createElementNS('http://www.w3.org/2000/svg','circle')
@@ -669,7 +737,7 @@ sun_circle.setAttribute('fill', 'none');
 sun_circle.setAttribute('stroke', '#f9ed40');
 sun_circle.setAttribute('stroke-width', 12);
 document.getElementById('sunshine').appendChild(sun_circle);
-
+*/
 
 
 
