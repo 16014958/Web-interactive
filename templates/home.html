@@ -165,7 +165,7 @@ body{
 
 .buttons{
   position: absolute;
-  top: 200px;
+  top: 150px;
  left: 100px;
   width: 130px;
 }
@@ -207,8 +207,11 @@ h1 {
 }
 
 .months{
-  margin-top: 70px;
+  max-width: 100px;
+  margin-top: 20px;
   color: white;
+  float: left;
+  margin-right: 100px;
   /*width: 400px;*/
   /*position: absolute;
   top: 300px;*/
@@ -223,8 +226,20 @@ margin-top: 15px;
 
 .months h2{
   letter-spacing: 5px;
+  height: 50px;
 }
 
+
+svg {
+  margin-top: 100px;
+}
+
+
+.list{
+  width: 450px;
+  /* background-color: red; */
+  float: left;
+}
 
 #rain rect{
   -webkit-animation: breathing 54s  infinite ;
@@ -250,7 +265,78 @@ margin-top: 15px;
 }
 
 
+@media only screen and (max-width: 850px){
 
+svg{
+  margin-top: 900px;
+  width: 160%;
+  margin-left: -300px;
+  height: 100%;
+
+}
+
+
+
+}
+
+@media only screen and (max-width: 600px){
+
+.title{
+  position: absolute;
+  left: 50px;
+
+}
+
+.buttons{
+  position: absolute;
+  left: 50px;
+
+}
+
+
+
+
+
+}
+
+
+@media only screen and (max-width: 480px){
+
+
+  .title{
+    position: absolute;
+    left: 20px;
+
+  }
+
+  .buttons{
+    position: absolute;
+    left: 20px;
+
+  }
+
+
+}
+
+@media only screen and (max-width: 445px){
+
+
+  .months
+  {
+    max-width: 100%;
+  }
+
+  .buttons{
+    width: 200px;
+    /* background-color: red; */
+  }
+
+svg{
+  margin-top: 1200px;
+}
+
+
+}
 
 </style>
 </head>
@@ -334,32 +420,34 @@ margin-top: 15px;
   <p id="NorthIsland"> North Island </p>
   <p id="SouthIsland"> South Island </p>
 
-    <div class="months">
-        <h2 > Monthly Avg </h2>
-        <p > January </p>
-        <p > February </p>
-        <p > March </p>
-        <p > April </p>
-        <p > May </p>
-        <p > June </p>
-        <p > July </p>
-        <p > August </p>
-        <p > September </p>
-        <p > October </p>
-        <p > November </p>
-        <p > December </p>
-    </div>
+<div class="list">
+      <div class="months">
+          <h2 > Monthly Avg </h2>
+          <p > January </p>
+          <p > February </p>
+          <p > March </p>
+          <p > April </p>
+          <p > May </p>
+          <p > June </p>
+          <p > July </p>
+          <p > August </p>
+          <p > September </p>
+          <p > October </p>
+          <p > November </p>
+          <p > December </p>
+      </div>
 
 
-    <div class="months">
-        <h2 >Measurement </h2>
-        <p > Humidity </p>
-        <p > Rainfall </p>
-        <p > Sunshine hrs </p>
-        <p > Air Temp </p>
-        <p > All </p>
-    </div>
 
+      <div class="months">
+          <h2 >Measurement </h2>
+          <p > Humidity </p>
+          <p > Rainfall </p>
+          <p > Sunshine hrs </p>
+          <p > Air Temp </p>
+          <p > All </p>
+      </div>
+  </div>
 </div>
 
 <script>
