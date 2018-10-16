@@ -34,8 +34,160 @@ def Temp_list():
 
 
 
+@app.route('/TempJanuary', methods=['GET'])
+def TempJanuary_list():
+    con = sqlite3.connect(WEATHERDB)
+    TempJanuary = []
+    cur = con.execute('SELECT * FROM TemperatureTwo')
+
+    for row in cur:
+        TempJanuary.append(list(row))
+    con.close()
+    return jsonify(TempJanuary)
 
 
+
+@app.route('/TempFebruary', methods=['GET'])
+def TempFebruary_list():
+    con = sqlite3.connect(WEATHERDB)
+    TempFebruary = []
+    cur = con.execute('SELECT * FROM TemperatureTwo')
+
+    for row in cur:
+        TempFebruary.append(list(row))
+    con.close()
+    return jsonify(TempFebruary)
+
+
+
+@app.route('/TempMarch', methods=['GET'])
+def TempMarch_list():
+    con = sqlite3.connect(WEATHERDB)
+    TempMarch = []
+    cur = con.execute('SELECT * FROM TemperatureTwo')
+
+    for row in cur:
+        TempMarch.append(list(row))
+    con.close()
+    return jsonify(TempMarch)
+
+
+
+
+@app.route('/TempApril', methods=['GET'])
+def TempApril_list():
+    con = sqlite3.connect(WEATHERDB)
+    TempApril = []
+    cur = con.execute('SELECT * FROM TemperatureTwo')
+
+    for row in cur:
+        TempApril.append(list(row))
+    con.close()
+    return jsonify(TempApril)
+
+
+@app.route('/TempMay', methods=['GET'])
+def TempMay_list():
+    con = sqlite3.connect(WEATHERDB)
+    TempMay = []
+    cur = con.execute('SELECT * FROM TemperatureTwo')
+
+    for row in cur:
+        TempMay.append(list(row))
+    con.close()
+    return jsonify(TempMay)
+
+
+
+
+@app.route('/TempJune', methods=['GET'])
+def TempJune_list():
+    con = sqlite3.connect(WEATHERDB)
+    TempJune = []
+    cur = con.execute('SELECT * FROM TemperatureTwo')
+
+    for row in cur:
+        TempJune.append(list(row))
+    con.close()
+    return jsonify(TempJune)
+
+
+
+@app.route('/TempJuly', methods=['GET'])
+def TempJuly_list():
+    con = sqlite3.connect(WEATHERDB)
+    TempJuly = []
+    cur = con.execute('SELECT * FROM TemperatureTwo')
+
+    for row in cur:
+        TempJuly.append(list(row))
+    con.close()
+    return jsonify(TempJuly)
+
+
+
+
+@app.route('/TempAugust', methods=['GET'])
+def TempAugust_list():
+    con = sqlite3.connect(WEATHERDB)
+    TempAugust = []
+    cur = con.execute('SELECT * FROM TemperatureTwo')
+
+    for row in cur:
+        TempAugust.append(list(row))
+    con.close()
+    return jsonify(TempAugust)
+
+
+
+
+@app.route('/TempSeptember', methods=['GET'])
+def TempSeptember_list():
+    con = sqlite3.connect(WEATHERDB)
+    TempSeptember = []
+    cur = con.execute('SELECT * FROM TemperatureTwo')
+
+    for row in cur:
+        TempSeptember.append(list(row))
+    con.close()
+    return jsonify(TempSeptember)
+
+
+
+@app.route('/TempOctober', methods=['GET'])
+def TempOctober_list():
+    con = sqlite3.connect(WEATHERDB)
+    TempOctober = []
+    cur = con.execute('SELECT * FROM TemperatureTwo')
+
+    for row in cur:
+        TempOctober.append(list(row))
+    con.close()
+    return jsonify(TempOctober)
+
+
+@app.route('/TempNovember', methods=['GET'])
+def TempNovember_list():
+    con = sqlite3.connect(WEATHERDB)
+    TempNovember = []
+    cur = con.execute('SELECT * FROM TemperatureTwo')
+
+    for row in cur:
+        TempNovember.append(list(row))
+    con.close()
+    return jsonify(TempNovember)
+
+
+@app.route('/TempDecember', methods=['GET'])
+def TempDecember_list():
+    con = sqlite3.connect(WEATHERDB)
+    TempDecember = []
+    cur = con.execute('SELECT * FROM TemperatureTwo')
+
+    for row in cur:
+        TempDecember.append(list(row))
+    con.close()
+    return jsonify(TempDecember)
 
 
 

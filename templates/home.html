@@ -447,7 +447,7 @@ svg{
 
 
 
-#info {
+.info {
   width: 300px;
   height: 350px;
   font-family: 'ProximaREG';
@@ -457,10 +457,11 @@ svg{
   font-weight: lighter;
   color: white;
   float: left;
-  margin-right: 50px;
+  margin-right: 30px;
+  margin-left: 30px;
 }
 
-#info p{
+.info p{
   height: 5px;
 }
 
@@ -472,7 +473,7 @@ svg{
 }
 
 
-#town{
+.town{
   font-family: 'MavenPro', sans-serif;
   margin-bottom: 20px;
   font-size: 1.3rem;
@@ -483,9 +484,10 @@ svg{
 
 .text{
   margin-top: 300px;
-  width: 90%;
+  max-width: 1100px;
   margin-left: auto;
   margin-right: auto;
+
 
 }
 
@@ -495,10 +497,26 @@ svg{
   font-size: 2.5rem;
   letter-spacing: 15px;
   color: white;
-  margin-bottom: 100px;
+  margin-bottom: 50px;
+  margin-left: 30px;
 }
 
-#number{
+.p {
+  font-family: 'ProximaREG';
+  /* font-family:  sans-serif; */
+  /* background-color: red; */
+  /* line-height: 2px; */
+  font-style: italic;
+  margin-bottom: 40px;
+  font-weight: lighter;
+  color: white;
+  margin-left: 30px;
+  width: 300px;
+}
+
+
+
+.number{
   font-family: 'Proxima';
   position: relative;
   left: 240px;
@@ -564,12 +582,26 @@ svg{
       </g>
 
 
-      <g id="temperature" transform="scale(0.5 0.5) translate(100, 400)">
+      <g id="Temperature" >
 
-        <g id="a" opacity="1">
-          <rect x="146.96" width="39.05" height="332.97" fill="#a81b1a"/>
-          <rect x="180.47" y="29.26" width="39.05" height="332.97" transform="translate(362.22 -33.52) rotate(90)" fill="#a81b1a"/>
-        </g>
+        <g id="a" opacity="0">
+
+            <rect x="37.47" y="186.67" width="7.66" height="82.6" fill="#a83333"/>
+            <rect x="72.71" y="226.69" width="7.66" height="82.6" transform="translate(-226.69 304.51) rotate(-90)" fill="#a83333"/>
+            <rect x="86.32" y="38.31" width="11.82" height="127.5" fill="#a83333"/>
+            <rect x="121.56" y="78.32" width="11.82" height="127.5" transform="translate(-49.85 229.52) rotate(-90)" fill="#a83333"/>
+            <rect x="177.15" y="129.33" width="10.36" height="111.76" fill="#a83333"/>
+            <rect x="212.39" y="169.35" width="10.36" height="111.76" transform="translate(-42.89 402.78) rotate(-90)" fill="#a83333"/>
+            <rect x="178.78" width="7.1" height="76.61" fill="#a83333"/>
+            <rect x="214.02" y="40.02" width="7.1" height="76.61" transform="translate(104.01 255.88) rotate(-90)" fill="#a83333"/>
+            <rect x="275.06" y="78.85" width="5.49" height="59.23" fill="#a83333"/>
+            <rect x="310.3" y="118.87" width="5.49" height="59.23" transform="translate(129.32 421.52) rotate(-90)" fill="#a83333"/>
+            <rect x="277.81" y="220.16" width="3.88" height="41.86" fill="#a83333"/>
+            <rect x="313.05" y="260.18" width="3.88" height="41.86" transform="translate(-1.36 556.07) rotate(-90)" fill="#a83333"/>
+
+
+          </g>
+
 
       </g>
 
@@ -647,23 +679,307 @@ svg{
 
 
 <div class="text">
-  <div class="allData">All Data</div>
 
 
-    <div id="info">
-      <p id="town"> Town </p>
-      <p id="number"> 01 </p>
+  <div class="allData">Data</div>
+  <p class="p">These are just a few of the towns which make up the overall data. </p>
+
+
+
+
+
+    <div class="info">
+      <p class="town">Kaitia</p>
+
+
+
+
+      <p class="number"> 01 </p>
 
       <div class="line"> </div>
-      <p>  Rain average: <span id="RAVG">  </span> </p>
-      <p>  Sunshine average: <span id="SAVG">  </span> </p>
-      <p>  Temperature average: <span id="TAVG">  </span> </p>
-      <p>  Humidity average: <span id="HAVG">  </span> </p>
+      <p>  Annual rain average: <span class="RAVG"> 1304mm </span> </p>
+      <p>  Annual Sunshine average: <span class="SAVG"> 2115hrs </span> </p>
+      <p>  Annual Temperature average: <span class="TAVG"> 15.7C </span> </p>
+      <p>  Annual Humidity average: <span class="HAVG"> 83.6% </span> </p>
 
 
 
 
     </div>
+
+
+
+
+    <div class="info">
+      <p class="town">Whangarei</p>
+
+
+
+
+      <p class="number"> 02 </p>
+
+      <div class="line"> </div>
+      <p>  Annual rain average: <span class="RAVG"> 1304mm </span> </p>
+      <p>  Annual Sunshine average: <span class="SAVG"> 2115hrs </span> </p>
+      <p>  Annual Temperature average: <span class="TAVG"> 15.5C </span> </p>
+      <p>  Annual Humidity average: <span class="HAVG"> 83.6% </span> </p>
+
+
+
+
+    </div>
+
+
+    <div class="info">
+      <p class="town">Auckland</p>
+
+
+
+
+      <p class="number"> 03 </p>
+
+      <div class="line"> </div>
+      <p>  Annual rain average: <span class="RAVG"> 1212mm </span> </p>
+      <p>  Annual Sunshine average: <span class="SAVG"> 2003hrs </span> </p>
+      <p>  Annual Temperature average: <span class="TAVG"> 15.1C </span> </p>
+      <p>  Annual Humidity average: <span class="HAVG"> 82.3% </span> </p>
+
+
+
+
+    </div>
+
+
+    <div class="info">
+      <p class="town">Tauranga</p>
+
+
+
+
+      <p class="number"> 04 </p>
+
+      <div class="line"> </div>
+      <p>  Annual rain average: <span class="RAVG"> 1180mm </span> </p>
+      <p>  Annual Sunshine average: <span class="SAVG"> 2345hrs </span> </p>
+      <p>  Annual Temperature average: <span class="TAVG"> 14.8C </span> </p>
+      <p>  Annual Humidity average: <span class="HAVG"> 78.8% </span> </p>
+
+
+
+
+    </div>
+
+    <div class="info">
+      <p class="town">Hamilton</p>
+
+
+
+
+      <p class="number"> 05 </p>
+
+      <div class="line"> </div>
+      <p>  Annual rain average: <span class="RAVG"> 1108mm </span> </p>
+      <p>  Annual Sunshine average: <span class="SAVG"> 2019hrs </span> </p>
+      <p>  Annual Temperature average: <span class="TAVG"> 13.8C </span> </p>
+      <p>  Annual Humidity average: <span class="HAVG"> 85% </span> </p>
+
+
+
+
+    </div>
+
+
+    <div class="info">
+      <p class="town">Gisborne</p>
+
+
+
+
+      <p class="number"> 06 </p>
+
+      <div class="line"> </div>
+      <p>  Annual rain average: <span class="RAVG"> 996mm </span> </p>
+      <p>  Annual Sunshine average: <span class="SAVG"> 2217hrs </span> </p>
+      <p>  Annual Temperature average: <span class="TAVG"> 14.4C </span> </p>
+      <p>  Annual Humidity average: <span class="HAVG"> 76.1% </span> </p>
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+    <div class="info">
+      <p class="town">New Plymouth</p>
+
+
+
+
+      <p class="number"> 08 </p>
+
+      <div class="line"> </div>
+      <p>  Annual rain average: <span class="RAVG"> 1385mm </span> </p>
+      <p>  Annual Sunshine average: <span class="SAVG"> 2197hrs </span> </p>
+      <p>  Annual Temperature average: <span class="TAVG"> 13.7C </span> </p>
+      <p>  Annual Humidity average: <span class="HAVG"> 83% </span> </p>
+
+
+
+
+    </div>
+
+
+    <div class="info">
+      <p class="town">Wellington</p>
+
+
+
+
+      <p class="number"> 09 </p>
+
+      <div class="line"> </div>
+      <p>  Annual rain average: <span class="RAVG"> 1207mm </span> </p>
+      <p>  Annual Sunshine average: <span class="SAVG"> 2110hrs </span> </p>
+      <p>  Annual Temperature average: <span class="TAVG"> 12.9C </span> </p>
+      <p>  Annual Humidity average: <span class="HAVG"> 82.9% </span> </p>
+
+
+
+
+    </div>
+
+
+
+    <div class="info">
+      <p class="town">Nelson</p>
+
+
+
+
+      <p class="number"> 10 </p>
+
+      <div class="line"> </div>
+      <p>  Annual rain average: <span class="RAVG"> 960mm </span> </p>
+      <p>  Annual Sunshine average: <span class="SAVG"> 2472hrs </span> </p>
+      <p>  Annual Temperature average: <span class="TAVG"> 12.7C </span> </p>
+      <p>  Annual Humidity average: <span class="HAVG"> 81.2% </span> </p>
+
+
+
+
+    </div>
+
+
+
+    <div class="info">
+      <p class="town">Blenheim</p>
+
+
+
+
+      <p class="number"> 11 </p>
+
+      <div class="line"> </div>
+      <p>  Annual rain average: <span class="RAVG"> 711mm </span> </p>
+      <p>  Annual Sunshine average: <span class="SAVG"> 2475hrs </span> </p>
+      <p>  Annual Temperature average: <span class="TAVG"> 12.6C </span> </p>
+      <p>  Annual Humidity average: <span class="HAVG"> 75.4% </span> </p>
+
+
+
+
+    </div>
+
+
+
+
+    <div class="info">
+      <p class="town">Christchurch</p>
+
+
+
+
+      <p class="number"> 12 </p>
+
+      <div class="line"> </div>
+      <p>  Annual rain average: <span class="RAVG"> 618mm </span> </p>
+      <p>  Annual Sunshine average: <span class="SAVG"> 2142hrs </span> </p>
+      <p>  Annual Temperature average: <span class="TAVG"> 12.2C </span> </p>
+      <p>  Annual Humidity average: <span class="HAVG"> 85.1% </span> </p>
+
+
+
+
+    </div>
+
+
+    <div class="info">
+      <p class="town">Queenstown</p>
+
+
+
+
+      <p class="number"> 13 </p>
+
+      <div class="line"> </div>
+      <p>  Annual rain average: <span class="RAVG"> 748mm </span> </p>
+      <p>  Annual Sunshine average: <span class="SAVG"> 1929hrs </span> </p>
+      <p>  Annual Temperature average: <span class="TAVG"> 9.7C </span> </p>
+      <p>  Annual Humidity average: <span class="HAVG"> 75.5% </span> </p>
+
+
+
+
+    </div>
+
+
+    <div class="info">
+      <p class="town">Milford Sound</p>
+
+
+
+
+      <p class="number"> 14 </p>
+
+      <div class="line"> </div>
+      <p>  Annual rain average: <span class="RAVG"> 6715mm </span> </p>
+      <p>  Annual Sunshine average: <span class="SAVG"> 1840hrs </span> </p>
+      <p>  Annual Temperature average: <span class="TAVG"> 10.3C </span> </p>
+      <p>  Annual Humidity average: <span class="HAVG"> 90% </span> </p>
+
+
+
+
+    </div>
+
+
+    <div class="info">
+      <p class="town">Dunedin</p>
+
+
+
+
+      <p class="number"> 15 </p>
+
+      <div class="line"> </div>
+      <p>  Annual rain average: <span class="RAVG"> 736mm </span> </p>
+      <p>  Annual Sunshine average: <span class="SAVG"> 1683hrs </span> </p>
+      <p>  Annual Temperature average: <span class="TAVG"> 11.1C </span> </p>
+      <p>  Annual Humidity average: <span class="HAVG"> 75.9% </span> </p>
+
+
+
+
+    </div>
+
+
+
 
 </div>
 
@@ -680,10 +996,10 @@ svg{
 
 
 
-document.getElementById("RAVG").innerHTML = "helloooo";
-document.getElementById("SAVG").innerHTML = "helloooo";
-document.getElementById("TAVG").innerHTML = "helloooo";
-document.getElementById("HAVG").innerHTML = "helloooo";
+// document.getElementById("RAVG").innerHTML = "helloooo";
+// document.getElementById("SAVG").innerHTML = "helloooo";
+// document.getElementById("TAVG").innerHTML = "helloooo";
+// document.getElementById("HAVG").innerHTML = "helloooo";
 
 
 
@@ -779,7 +1095,7 @@ this.style.cursor = 'default';
 document.getElementById('Sun').addEventListener('click', function hideRain(){
   TweenMax.to('#rain', 0.8, {opacity: 0.2});
   TweenMax.to('#RF' , 0.1, {color:"white", backgroundColor:"#358f87"});
-  TweenMax.to('#temperature', 0.8, {opacity: 0.2});
+  TweenMax.to('#Temperature', 0.8, {opacity: 0.2});
   TweenMax.to('#Air' , 0.1, {color:"white", backgroundColor:"#358f87"});
   TweenMax.to('#Humidity', 0.8, {opacity: 0.2});
   TweenMax.to('#humid' , 0.1, {color:"white", backgroundColor:"#358f87"});
@@ -804,7 +1120,7 @@ document.getElementById('RF').addEventListener('click', function hideRain(){
   TweenMax.to('#Sun' , 0.1, {color:"white", backgroundColor:"#358f87"});
 
 
-  TweenMax.to('#temperature', 0.8, {opacity: 0.2});
+  TweenMax.to('#Temperature', 0.8, {opacity: 0.2});
   TweenMax.to('#Air' , 0.1, {color:"white", backgroundColor:"#358f87"});
   TweenMax.to('#Humidity', 0.8, {opacity: 0.2});
   TweenMax.to('#humid' , 0.1, {color:"white", backgroundColor:"#358f87"});
@@ -824,7 +1140,7 @@ document.getElementById('Air').addEventListener('click', function hideRain(){
   TweenMax.to('#Sun' , 0.1, {color:"white", backgroundColor:"#358f87"});
 
 
-  TweenMax.to('#temperature', 0.8, {opacity: 1});
+  TweenMax.to('#Temperature', 0.8, {opacity: 1});
   TweenMax.to('#Air' , 0.1, {color:"#358f87", backgroundColor:"white"});
   TweenMax.to('#Humidity', 0.8, {opacity: 0.2});
   TweenMax.to('#humid' , 0.1, {color:"white", backgroundColor:"#358f87"});
@@ -844,7 +1160,7 @@ document.getElementById('humid').addEventListener('click', function hideRain(){
   TweenMax.to('#Sun' , 0.1, {color:"white", backgroundColor:"#358f87"});
 
 
-  TweenMax.to('#temperature', 0.8, {opacity: 0.2});
+  TweenMax.to('#Temperature', 0.8, {opacity: 0.2});
   TweenMax.to('#Air' , 0.1, {color:"white", backgroundColor:"#358f87"});
   TweenMax.to('#Humidity', 0.8, {opacity: 1});
   TweenMax.to('#humid' , 0.1, {color:"#358f87", backgroundColor:"white"});
@@ -865,7 +1181,7 @@ document.getElementById('all').addEventListener('click', function hideRain(){
   TweenMax.to('#Sun' , 0.1, {color:"white", backgroundColor:"#358f87"});
 
 
-  TweenMax.to('#temperature', 0.8, {opacity: 1});
+  TweenMax.to('#Temperature', 0.8, {opacity: 1});
   TweenMax.to('#Air' , 0.1, {color:"white", backgroundColor:"#358f87"});
   TweenMax.to('#Humidity', 0.8, {opacity: 1});
   TweenMax.to('#humid' , 0.1, {color:"white", backgroundColor:"#358f87"});
@@ -928,6 +1244,7 @@ TweenMax.to('#Year', 0.2, {color:"white", backgroundColor:"#358f87"});
   TweenMax.to('#sunshineThree', 0.3, {opacity: 0});
   TweenMax.to('#rainfall', 0.3, {opacity: 0});
   TweenMax.to('#H', 0.3, {opacity: 0});
+      TweenMax.to('#T', 0.3, {opacity: 0});
 this.style.cursor = 'default';
 });
 
@@ -973,6 +1290,7 @@ TweenMax.to('#Year', 0.2, {color:"white", backgroundColor:"#358f87"});
   TweenMax.to('#sunshineThree', 0.3, {opacity: 0});
   TweenMax.to('#rainfall', 0.3, {opacity: 0});
   TweenMax.to('#H', 0.3, {opacity: 0});
+      TweenMax.to('#T', 0.3, {opacity: 0});
 this.style.cursor = 'default';
 });
 
@@ -1016,6 +1334,7 @@ TweenMax.to('#Year', 0.2, {color:"white", backgroundColor:"#358f87"});
   TweenMax.to('#sunshineThree', 0.3, {opacity: 0});
   TweenMax.to('#rainfall', 0.3, {opacity: 0});
   TweenMax.to('#H', 0.3, {opacity: 0});
+      TweenMax.to('#T', 0.3, {opacity: 0});
 this.style.cursor = 'default';
 });
 
@@ -1055,6 +1374,7 @@ TweenMax.to('#Year', 0.2, {color:"white", backgroundColor:"#358f87"});
   TweenMax.to('#sunshineThree', 0.3, {opacity: 0});
   TweenMax.to('#rainfall', 0.3, {opacity: 0});
   TweenMax.to('#H', 0.3, {opacity: 0});
+      TweenMax.to('#T', 0.3, {opacity: 0});
 this.style.cursor = 'default';
 });
 
@@ -1094,6 +1414,7 @@ TweenMax.to('#Year', 0.2, {color:"white", backgroundColor:"#358f87"});
   TweenMax.to('#sunshineThree', 0.3, {opacity: 0});
   TweenMax.to('#rainfall', 0.3, {opacity: 0});
   TweenMax.to('#H', 0.3, {opacity: 0});
+      TweenMax.to('#T', 0.3, {opacity: 0});
 this.style.cursor = 'default';
 });
 
@@ -1134,6 +1455,7 @@ TweenMax.to('#Year', 0.2, {color:"white", backgroundColor:"#358f87"});
   TweenMax.to('#sunshineThree', 0.3, {opacity: 0});
   TweenMax.to('#rainfall', 0.3, {opacity: 0});
   TweenMax.to('#H', 0.3, {opacity: 0});
+      TweenMax.to('#T', 0.3, {opacity: 0});
 this.style.cursor = 'default';
 });
 
@@ -1173,6 +1495,7 @@ TweenMax.to('#Year', 0.2, {color:"white", backgroundColor:"#358f87"});
   TweenMax.to('#sunshineThree', 0.3, {opacity: 0});
   TweenMax.to('#rainfall', 0.3, {opacity: 0});
   TweenMax.to('#H', 0.3, {opacity: 0});
+      TweenMax.to('#T', 0.3, {opacity: 0});
 this.style.cursor = 'default';
 });
 
@@ -1213,6 +1536,7 @@ TweenMax.to('#Year', 0.2, {color:"white", backgroundColor:"#358f87"});
   TweenMax.to('#sunshineThree', 0.3, {opacity: 0});
   TweenMax.to('#rainfall', 0.3, {opacity: 0});
   TweenMax.to('#H', 0.3, {opacity: 0});
+      TweenMax.to('#T', 0.3, {opacity: 0});
 this.style.cursor = 'default';
 });
 
@@ -1253,6 +1577,7 @@ TweenMax.to('#Year', 0.2, {color:"white", backgroundColor:"#358f87"});
   TweenMax.to('#sunshineThree', 0.3, {opacity: 0});
   TweenMax.to('#rainfall', 0.3, {opacity: 0});
   TweenMax.to('#H', 0.3, {opacity: 0});
+      TweenMax.to('#T', 0.3, {opacity: 0});
 this.style.cursor = 'default';
 });
 
@@ -1290,6 +1615,7 @@ TweenMax.to('#Year', 0.2, {color:"white", backgroundColor:"#358f87"});
   TweenMax.to('#sunshineThree', 0.3, {opacity: 0});
   TweenMax.to('#rainfall', 0.3, {opacity: 0});
   TweenMax.to('#H', 0.3, {opacity: 0});
+      TweenMax.to('#T', 0.3, {opacity: 0});
 this.style.cursor = 'default';
 });
 
@@ -1330,6 +1656,7 @@ TweenMax.to('#Year', 0.2, {color:"white", backgroundColor:"#358f87"});
   TweenMax.to('#sunshineThree', 0.3, {opacity: 0});
   TweenMax.to('#rainfall', 0.3, {opacity: 0});
   TweenMax.to('#H', 0.3, {opacity: 0});
+      TweenMax.to('#T', 0.3, {opacity: 0});
 this.style.cursor = 'default';
 });
 
@@ -1369,6 +1696,7 @@ TweenMax.to('#Year', 0.2, {color:"white", backgroundColor:"#358f87"});
   TweenMax.to('#sunshineThree', 0.3, {opacity: 0});
   TweenMax.to('#rainfall', 0.3, {opacity: 0});
   TweenMax.to('#H', 0.3, {opacity: 0});
+    TweenMax.to('#T', 0.3, {opacity: 0});
 this.style.cursor = 'default';
 });
 
@@ -1412,6 +1740,7 @@ TweenMax.to('#December', 0.3, {opacity: 0});
 TweenMax.to('#sunshineThree', 0.3, {opacity: 1});
   TweenMax.to('#rainfall', 0.3, {opacity: 1});
   TweenMax.to('#H', 0.3, {opacity: 1});
+    TweenMax.to('#T', 0.3, {opacity: 1});
 this.style.cursor = 'default';
 });
 
@@ -1447,20 +1776,123 @@ TempDecember = [];
 
 
 
+// s = Temp[i][14];
+// document.getElementById('town').innerHTML = "hello";
+
 
 function drawTemp() {
   for (var i=0; i <Temp.length; i++) {
 
-    // console.log('h: ' + Humidity[i][15]);
-    var Temp_line = document.getElementById('lines');
+
+    var Temp_line = document.getElementById('a');
     var Tmp = Temp_line.cloneNode(true);
 
-    translate = ((Temp[i][15])-110) + ',' + ((Temp[i][16])-20);
-    scale = Temp[i][14] / ( Temp[i][14] + 195);
+    translate = (Temp[i][15]- 80) + ',' + Temp[i][16];
+    scale = Temp[i][14]/40;
 
-    humid.setAttribute('id', 'H');
-    humid.setAttribute('transform', 'translate('+translate+')' + ' scale('+scale+')');
-    humid.setAttribute('opacity', 1);
+    Tmp.setAttribute('id', 'T');
+    Tmp.setAttribute('transform', 'translate('+ translate +')  scale('+scale+')' );
+    Tmp.setAttribute('backgroundColor', 'green');
+    Tmp.setAttribute('opacity', 1);
+
+
+
+
+    // var information = document.getElementById('info');
+    // var inf = information.cloneNode(true);
+
+
+    // console.log('h: ' + Temp[i][1]);
+    // s = Temp[i][1]
+    // console.log('h: ' + Humidity[i][15]);
+    // document.getElementById('town').innerHTML = s ;
+    // text.querySelector('.RAVG').innerHTML = hello;
+    // document.getElementById('info').appendChild(inf);
+
+    // text = document.getElementById('text');
+    // text.querySelector('.info').innerHTML = Humidity[i][14];
+
+
+
+    document.getElementById('Temperature').appendChild(Tmp);
+  }
+}
+
+var getTemp = new XMLHttpRequest();
+getTemp.onreadystatechange = function() {
+  if (this.readyState == 4 && this.status == 200) {
+    Temp = JSON.parse(getTemp.responseText);
+    drawTemp();
+  }
+  else {
+      console.log(this.readyState, this.status);
+  }
+};
+getTemp.open('GET', '/Temp');
+getTemp.send();
+
+
+
+
+
+
+
+function drawTempJanuary() {
+  for (var i=0; i <TempJanuary.length; i++) {
+
+    // console.log('h: ' + Humidity[i][15]);
+    var Temp_line = document.getElementById('a');
+    var Tmp = Temp_line.cloneNode(true);
+
+    translate = (TempJanuary[i][15]- 80) + ',' + TempJanuary[i][16];
+    scale = TempJanuary[i][2]/40;
+
+    Tmp.setAttribute('id', 'Janruary');
+    Tmp.setAttribute('transform', 'translate('+ translate +')  scale('+scale+')' );
+    Tmp.setAttribute('backgroundColor', 'green');
+    Tmp.setAttribute('opacity', 0);
+
+
+
+
+
+
+
+    document.getElementById('Temperature').appendChild(Tmp);
+  }
+}
+
+var getTempJanuary = new XMLHttpRequest();
+getTempJanuary.onreadystatechange = function() {
+  if (this.readyState == 4 && this.status == 200) {
+    TempJanuary = JSON.parse(getTempJanuary.responseText);
+    drawTempJanuary();
+  }
+  else {
+      console.log(this.readyState, this.status);
+  }
+};
+getTempJanuary.open('GET', '/TempJanuary');
+getTempJanuary.send();
+
+
+
+
+
+function drawTempFebruary() {
+  for (var i=0; i <TempFebruary.length; i++) {
+
+    // console.log('h: ' + Humidity[i][15]);
+    var Temp_line = document.getElementById('a');
+    var Tmp = Temp_line.cloneNode(true);
+
+    translate = (TempFebruary[i][15]- 80) + ',' + TempFebruary[i][16];
+    scale = TempFebruary[i][3]/40;
+
+    Tmp.setAttribute('id', 'February');
+    Tmp.setAttribute('transform', 'translate('+ translate +')  scale('+scale+')' );
+    Tmp.setAttribute('backgroundColor', 'green');
+    Tmp.setAttribute('opacity', 0);
 
 
 
@@ -1469,22 +1901,152 @@ function drawTemp() {
 
 
 
-    document.getElementById('Humidity').appendChild(humid);
+    document.getElementById('Temperature').appendChild(Tmp);
   }
 }
 
-var getHumidity = new XMLHttpRequest();
-getHumidity.onreadystatechange = function() {
+var getTempFebruary = new XMLHttpRequest();
+getTempFebruary.onreadystatechange = function() {
   if (this.readyState == 4 && this.status == 200) {
-    Humidity = JSON.parse(getHumidity.responseText);
-    drawHumidity();
+    TempFebruary = JSON.parse(getTempFebruary.responseText);
+    drawTempFebruary();
   }
   else {
       console.log(this.readyState, this.status);
   }
 };
-getHumidity.open('GET', '/Humidity');
-getHumidity.send();
+getTempFebruary.open('GET', '/TempFebruary');
+getTempFebruary.send();
+
+
+
+
+
+function drawTempApril() {
+  for (var i=0; i <TempApril.length; i++) {
+
+    // console.log('h: ' + Humidity[i][15]);
+    var Temp_line = document.getElementById('a');
+    var Tmp = Temp_line.cloneNode(true);
+
+    translate = (TempApril[i][15]- 80) + ',' + TempApril[i][16];
+    scale = TempApril[i][5]/40;
+
+    Tmp.setAttribute('id', 'April');
+    Tmp.setAttribute('transform', 'translate('+ translate +')  scale('+scale+')' );
+    Tmp.setAttribute('backgroundColor', 'green');
+    Tmp.setAttribute('opacity', 0);
+
+
+
+    // text = document.getElementById('text' + Humidity[i][1]);
+    // text.querySelector('.info').innerHTML = Humidity[i][14];
+
+
+
+    document.getElementById('Temperature').appendChild(Tmp);
+  }
+}
+
+var getTempApril = new XMLHttpRequest();
+getTempApril.onreadystatechange = function() {
+  if (this.readyState == 4 && this.status == 200) {
+    TempApril = JSON.parse(getTempApril.responseText);
+    drawTempApril();
+  }
+  else {
+      console.log(this.readyState, this.status);
+  }
+};
+getTempApril.open('GET', '/TempApril');
+getTempApril.send();
+
+
+
+
+
+
+function drawTempMarch() {
+  for (var i=0; i <TempMarch.length; i++) {
+
+    // console.log('h: ' + Humidity[i][15]);
+    var Temp_line = document.getElementById('a');
+    var Tmp = Temp_line.cloneNode(true);
+
+    translate = (TempMarch[i][15]- 80) + ',' + TempMarch[i][16];
+    scale = TempMarch[i][4]/40;
+
+    Tmp.setAttribute('id', 'March');
+    Tmp.setAttribute('transform', 'translate('+ translate +')  scale('+scale+')' );
+    Tmp.setAttribute('backgroundColor', 'green');
+    Tmp.setAttribute('opacity', 0);
+
+
+
+    // text = document.getElementById('text' + Humidity[i][1]);
+    // text.querySelector('.info').innerHTML = Humidity[i][14];
+
+
+
+    document.getElementById('Temperature').appendChild(Tmp);
+  }
+}
+
+var getTempMarch = new XMLHttpRequest();
+getTempMarch.onreadystatechange = function() {
+  if (this.readyState == 4 && this.status == 200) {
+    TempMarch = JSON.parse(getTempMarch.responseText);
+    drawTempMarch();
+  }
+  else {
+      console.log(this.readyState, this.status);
+  }
+};
+getTempMarch.open('GET', '/TempMarch');
+getTempMarch.send();
+
+
+
+
+
+function drawTempMay() {
+  for (var i=0; i <TempMay.length; i++) {
+
+    // console.log('h: ' + Humidity[i][15]);
+    var Temp_line = document.getElementById('a');
+    var Tmp = Temp_line.cloneNode(true);
+
+    translate = (TempMay[i][15]- 80) + ',' + TempMay[i][16];
+    scale = TempMay[i][6]/40;
+
+    Tmp.setAttribute('id', 'May');
+    Tmp.setAttribute('transform', 'translate('+ translate +')  scale('+scale+')' );
+    Tmp.setAttribute('backgroundColor', 'green');
+    Tmp.setAttribute('opacity', 0);
+
+
+
+    // text = document.getElementById('text' + Humidity[i][1]);
+    // text.querySelector('.info').innerHTML = Humidity[i][14];
+
+
+
+    document.getElementById('Temperature').appendChild(Tmp);
+  }
+}
+
+var getTempMay = new XMLHttpRequest();
+getTempMay.onreadystatechange = function() {
+  if (this.readyState == 4 && this.status == 200) {
+    TempMay = JSON.parse(getTempMay.responseText);
+    drawTempMay();
+  }
+  else {
+      console.log(this.readyState, this.status);
+  }
+};
+getTempMay.open('GET', '/TempMay');
+getTempMay.send();
 
 
 
@@ -1492,6 +2054,307 @@ getHumidity.send();
 
 
 
+function drawTempJune() {
+  for (var i=0; i <TempJune.length; i++) {
+
+    // console.log('h: ' + Humidity[i][15]);
+    var Temp_line = document.getElementById('a');
+    var Tmp = Temp_line.cloneNode(true);
+
+    translate = (TempJune[i][15]- 80) + ',' + TempJune[i][16];
+    scale = TempJune[i][7]/40;
+
+    Tmp.setAttribute('id', 'June');
+    Tmp.setAttribute('transform', 'translate('+ translate +')  scale('+scale+')' );
+    Tmp.setAttribute('backgroundColor', 'green');
+    Tmp.setAttribute('opacity', 0);
+
+
+
+    // text = document.getElementById('text' + Humidity[i][1]);
+    // text.querySelector('.info').innerHTML = Humidity[i][14];
+
+
+
+    document.getElementById('Temperature').appendChild(Tmp);
+  }
+}
+
+var getTempJune = new XMLHttpRequest();
+getTempJune.onreadystatechange = function() {
+  if (this.readyState == 4 && this.status == 200) {
+    TempJune = JSON.parse(getTempJune.responseText);
+    drawTempJune();
+  }
+  else {
+      console.log(this.readyState, this.status);
+  }
+};
+getTempJune.open('GET', '/TempJune');
+getTempJune.send();
+
+
+
+
+function drawTempJuly() {
+  for (var i=0; i <TempJuly.length; i++) {
+
+    // console.log('h: ' + Humidity[i][15]);
+    var Temp_line = document.getElementById('a');
+    var Tmp = Temp_line.cloneNode(true);
+
+    translate = (TempJuly[i][15]- 80) + ',' + TempJuly[i][16];
+    scale = TempJuly[i][8]/40;
+
+    Tmp.setAttribute('id', 'July');
+    Tmp.setAttribute('transform', 'translate('+ translate +')  scale('+scale+')' );
+    Tmp.setAttribute('backgroundColor', 'green');
+    Tmp.setAttribute('opacity', 0);
+
+
+
+    // text = document.getElementById('text' + Humidity[i][1]);
+    // text.querySelector('.info').innerHTML = Humidity[i][14];
+
+
+
+    document.getElementById('Temperature').appendChild(Tmp);
+  }
+}
+
+var getTempJuly = new XMLHttpRequest();
+getTempJuly.onreadystatechange = function() {
+  if (this.readyState == 4 && this.status == 200) {
+    TempJuly = JSON.parse(getTempJuly.responseText);
+    drawTempJuly();
+  }
+  else {
+      console.log(this.readyState, this.status);
+  }
+};
+getTempJuly.open('GET', '/TempJuly');
+getTempJuly.send();
+
+
+
+
+
+
+function drawTempAugust() {
+  for (var i=0; i <TempAugust.length; i++) {
+
+    // console.log('h: ' + Humidity[i][15]);
+    var Temp_line = document.getElementById('a');
+    var Tmp = Temp_line.cloneNode(true);
+
+    translate = (TempAugust[i][15]- 80) + ',' + TempAugust[i][16];
+    scale = TempAugust[i][9]/40;
+
+    Tmp.setAttribute('id', 'August');
+    Tmp.setAttribute('transform', 'translate('+ translate +')  scale('+scale+')' );
+    Tmp.setAttribute('backgroundColor', 'green');
+    Tmp.setAttribute('opacity', 0);
+
+
+
+    // text = document.getElementById('text' + Humidity[i][1]);
+    // text.querySelector('.info').innerHTML = Humidity[i][14];
+
+
+
+    document.getElementById('Temperature').appendChild(Tmp);
+  }
+}
+
+var getTempAugust = new XMLHttpRequest();
+getTempAugust.onreadystatechange = function() {
+  if (this.readyState == 4 && this.status == 200) {
+    TempAugust = JSON.parse(getTempAugust.responseText);
+    drawTempAugust();
+  }
+  else {
+      console.log(this.readyState, this.status);
+  }
+};
+getTempAugust.open('GET', '/TempAugust');
+getTempAugust.send();
+
+
+
+
+function drawTempSeptember() {
+  for (var i=0; i <TempSeptember.length; i++) {
+
+    // console.log('h: ' + Humidity[i][15]);
+    var Temp_line = document.getElementById('a');
+    var Tmp = Temp_line.cloneNode(true);
+
+    translate = (TempSeptember[i][15]- 80) + ',' + TempSeptember[i][16];
+    scale = TempSeptember[i][10]/40;
+
+    Tmp.setAttribute('id', 'September');
+    Tmp.setAttribute('transform', 'translate('+ translate +')  scale('+scale+')' );
+    Tmp.setAttribute('backgroundColor', 'green');
+    Tmp.setAttribute('opacity', 0);
+
+
+
+    // text = document.getElementById('text' + Humidity[i][1]);
+    // text.querySelector('.info').innerHTML = Humidity[i][14];
+
+
+
+    document.getElementById('Temperature').appendChild(Tmp);
+  }
+}
+
+var getTempSeptember = new XMLHttpRequest();
+getTempSeptember.onreadystatechange = function() {
+  if (this.readyState == 4 && this.status == 200) {
+    TempSeptember = JSON.parse(getTempSeptember.responseText);
+    drawTempSeptember();
+  }
+  else {
+      console.log(this.readyState, this.status);
+  }
+};
+getTempSeptember.open('GET', '/TempSeptember');
+getTempSeptember.send();
+
+
+
+
+
+
+function drawTempOctober() {
+  for (var i=0; i <TempOctober.length; i++) {
+
+    // console.log('h: ' + Humidity[i][15]);
+    var Temp_line = document.getElementById('a');
+    var Tmp = Temp_line.cloneNode(true);
+
+    translate = (TempOctober[i][15]- 80) + ',' + TempOctober[i][16];
+    scale = TempOctober[i][11]/40;
+
+    Tmp.setAttribute('id', 'October');
+    Tmp.setAttribute('transform', 'translate('+ translate +')  scale('+scale+')' );
+    Tmp.setAttribute('backgroundColor', 'green');
+    Tmp.setAttribute('opacity', 0);
+
+
+
+    // text = document.getElementById('text' + Humidity[i][1]);
+    // text.querySelector('.info').innerHTML = Humidity[i][14];
+
+
+
+    document.getElementById('Temperature').appendChild(Tmp);
+  }
+}
+
+var getTempOctober = new XMLHttpRequest();
+getTempOctober.onreadystatechange = function() {
+  if (this.readyState == 4 && this.status == 200) {
+    TempOctober = JSON.parse(getTempOctober.responseText);
+    drawTempOctober();
+  }
+  else {
+      console.log(this.readyState, this.status);
+  }
+};
+getTempOctober.open('GET', '/TempOctober');
+getTempOctober.send();
+
+
+
+
+
+
+
+function drawTempNovember() {
+  for (var i=0; i <TempNovember.length; i++) {
+
+    // console.log('h: ' + Humidity[i][15]);
+    var Temp_line = document.getElementById('a');
+    var Tmp = Temp_line.cloneNode(true);
+
+    translate = (TempOctober[i][15]- 80) + ',' + TempOctober[i][16];
+    scale = TempOctober[i][12]/40;
+
+    Tmp.setAttribute('id','November');
+    Tmp.setAttribute('transform', 'translate('+ translate +')  scale('+scale+')' );
+    Tmp.setAttribute('backgroundColor', 'green');
+    Tmp.setAttribute('opacity', 0);
+
+
+
+    // text = document.getElementById('text' + Humidity[i][1]);
+    // text.querySelector('.info').innerHTML = Humidity[i][14];
+
+
+
+    document.getElementById('Temperature').appendChild(Tmp);
+  }
+}
+
+var getTempNovember = new XMLHttpRequest();
+getTempNovember.onreadystatechange = function() {
+  if (this.readyState == 4 && this.status == 200) {
+    TempNovember = JSON.parse(getTempNovember.responseText);
+    drawTempNovember();
+  }
+  else {
+      console.log(this.readyState, this.status);
+  }
+};
+getTempNovember.open('GET', '/TempNovember');
+getTempNovember.send();
+
+
+
+
+
+
+
+
+function drawTempDecember() {
+  for (var i=0; i <TempDecember.length; i++) {
+
+    // console.log('h: ' + Humidity[i][15]);
+    var Temp_line = document.getElementById('a');
+    var Tmp = Temp_line.cloneNode(true);
+
+    translate = (TempDecember[i][15]- 80) + ',' + TempDecember[i][16];
+    scale = TempDecember[i][13]/40;
+
+    Tmp.setAttribute('id', 'December');
+    Tmp.setAttribute('transform', 'translate('+ translate +')  scale('+scale+')' );
+    Tmp.setAttribute('backgroundColor', 'green');
+    Tmp.setAttribute('opacity', 0);
+
+
+
+    // text = document.getElementById('text' + Humidity[i][1]);
+    // text.querySelector('.info').innerHTML = Humidity[i][14];
+
+
+
+    document.getElementById('Temperature').appendChild(Tmp);
+  }
+}
+
+var getTempDecember = new XMLHttpRequest();
+getTempDecember.onreadystatechange = function() {
+  if (this.readyState == 4 && this.status == 200) {
+    TempDecember = JSON.parse(getTempDecember.responseText);
+    drawTempDecember();
+  }
+  else {
+      console.log(this.readyState, this.status);
+  }
+};
+getTempDecember.open('GET', '/TempDecember');
+getTempDecember.send();
 
 
 
