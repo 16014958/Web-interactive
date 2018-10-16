@@ -16,8 +16,29 @@ src: url(static/MavenPro-Bold.ttf);
 }
 
 
+
+@font-face {
+font-family: 'Proxima';
+src: url(static/PNsemibold.ttf);
+
+}
+
+
+
+@font-face {
+font-family: 'ProximaREG';
+src: url(static/PNregular.ttf);
+}
+
+
+
+
 body{
-  background-color: #28353b
+  background-color: #28353b;
+  background-image: url('static/background.png');
+  background-size: 100%;
+ overflow-x: hidden;
+
 }
 
 /* Fade In */
@@ -79,7 +100,7 @@ body{
 
 /* Breathing Animation */
 
-@-webkit-keyframes breathing {
+/* @-webkit-keyframes breathing {
   0% {
     -webkit-transform: scale(1);
     transform: scale(1);
@@ -125,7 +146,7 @@ body{
     -ms-transform: scale(1);
     transform: scale(1);
   }
-}
+} */
 
 
 
@@ -192,6 +213,40 @@ body{
   cursor: pointer;
 }
 
+
+
+.buttons2{
+  position: relative;
+  top: 100px;
+ left: 90px;
+  width: 130px;
+  display: none;
+}
+
+.buttons2 p {
+  color: white;
+  font-family: "MavenPro", sans-serif;
+  margin-top: 20px;
+  font-size: 0.8rem;
+  padding: 5px;
+  background-color: red;
+  border-radius: 35px;
+  background-color: #358f87;
+  text-align: center;
+  display: block;
+
+}
+
+.buttons2 p:hover{
+  color:  #358f87;
+  background-color: white;
+  box-shadow: 0 0 0 #358f87;
+  animation: pulse 1s infinite;
+  cursor: pointer;
+}
+
+
+
 .title{
   position: absolute;
   top: 50px;
@@ -203,6 +258,7 @@ h1 {
   font-family: 'MavenPro', sans-serif;
   letter-spacing: 10px;
   color: white;
+  font-size: 2.5rem;
 
 }
 
@@ -264,17 +320,35 @@ svg {
 
 }
 
+.car{color:white;}
+
+
 
 @media only screen and (max-width: 850px){
 
 svg{
-  margin-top: 900px;
-  width: 160%;
-  margin-left: -300px;
-  height: 100%;
+  margin-top: 1000px;
+  width: 100%;
+  /* margin-left: -300px; */
+  /* height: 100%; */
 
 }
 
+#NorthIsland{
+  display: none;
+}
+
+#SouthIsland{
+  display: none;
+}
+
+.buttons2{
+  position: absolute;
+  top: 800px;
+ left: 100px;
+  width: 130px;
+  display: block;
+}
 
 
 }
@@ -293,6 +367,19 @@ svg{
 
 }
 
+.buttons2{
+  position: absolute;
+  /* top: 800px; */
+ left: 50px;
+  width: 130px;
+  /* display: block; */
+}
+
+
+/* svg{
+  width: 170%;
+  background-color: red;
+} */
 
 
 
@@ -315,6 +402,13 @@ svg{
 
   }
 
+  .buttons2{
+    position: absolute;
+    /* top: 800px; */
+   left: 20px;
+    width: 130px;
+    /* display: block; */
+  }
 
 }
 
@@ -331,6 +425,19 @@ svg{
     /* background-color: red; */
   }
 
+
+  .buttons2{
+    position: absolute;
+    top: 1150px;
+   /* left: 50px; */
+    width: 200px;
+    /* display: block; */
+  }
+
+
+
+
+
 svg{
   margin-top: 1200px;
 }
@@ -338,7 +445,71 @@ svg{
 
 }
 
+
+
+#info {
+  width: 300px;
+  height: 350px;
+  font-family: 'ProximaREG';
+  /* font-family:  sans-serif; */
+  /* background-color: red; */
+  /* line-height: 2px; */
+  font-weight: lighter;
+  color: white;
+  float: left;
+  margin-right: 50px;
+}
+
+#info p{
+  height: 5px;
+}
+
+
+.line{
+  width: 100%;
+  height: 2px;
+  background-color: white;
+}
+
+
+#town{
+  font-family: 'MavenPro', sans-serif;
+  margin-bottom: 20px;
+  font-size: 1.3rem;
+  position: relative;
+  top: 108px;
+}
+
+
+.text{
+  margin-top: 300px;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+
+.allData{
+  font-family: 'MavenPro', sans-serif;
+  font-size: 2.5rem;
+  letter-spacing: 15px;
+  color: white;
+  margin-bottom: 100px;
+}
+
+#number{
+  font-family: 'Proxima';
+  position: relative;
+  left: 240px;
+  font-size: 4rem;
+  font-weight: lighter;
+}
+
 </style>
+
+
+
 </head>
 
 
@@ -349,7 +520,7 @@ svg{
 
 
 
-  <svg width="100%" height="100%"  viewBox="0 0 600 1000">
+  <svg width="100%" height="140%"  viewBox="0 0 600 1300">
     <g id="everything">
       <!-- <rect x="50" y="50" width="100" height="200" fill="#F00" /> -->
       <g id="NZ" transform="scale(1, 1)" >
@@ -377,8 +548,9 @@ svg{
 
         </g>
 
+          <!-- <circle cx="150" cy="1350" r="5.76" fill="#f9ed40" stroke="#f9ed40"   transform="scale(1, 1)" /> -->
 
-        <g id="sunshine">
+        <g id="sunshine" class="sun">
 
           <!-- <circle cx="960.76" cy="160.76" r="110.76" fill="none" stroke="#f9ed40" stroke-miterlimit="10" stroke-width="100"  transform="scale(0.1, 0.1)" /> -->
 
@@ -393,38 +565,27 @@ svg{
 
 
       <g id="temperature" transform="scale(0.5 0.5) translate(100, 400)">
-        <g>
-        	<g>
-        		<path class="st0" d="M172.6,196.2c65.7,0,131.4,0,197.2,0c3.2,0,3.2-5,0-5c-65.7,0-131.4,0-197.2,0
-        			C169.4,191.2,169.4,196.2,172.6,196.2L172.6,196.2z"/>
-        	</g>
+
+        <g id="a" opacity="1">
+          <rect x="146.96" width="39.05" height="332.97" fill="#a81b1a"/>
+          <rect x="180.47" y="29.26" width="39.05" height="332.97" transform="translate(362.22 -33.52) rotate(90)" fill="#a81b1a"/>
         </g>
-        <g>
-        	<g>
-        		<path class="st0" d="M118,235.2c101,0,202,0,302.9,0c28.6,0,57.1,0,85.7,0c3.2,0,3.2-5,0-5c-101,0-202,0-302.9,0
-        			c-28.6,0-57.1,0-85.7,0C114.8,230.2,114.8,235.2,118,235.2L118,235.2z"/>
-        	</g>
-        </g>
-        <g>
-        	<g>
-        		<path class="st0" d="M187.5,265.7c75.9,0,151.7,0,227.6,0c21.5,0,43.1,0,64.6,0c3.2,0,3.2-5,0-5c-75.9,0-151.7,0-227.6,0
-        			c-21.5,0-43.1,0-64.6,0C184.3,260.7,184.3,265.7,187.5,265.7L187.5,265.7z"/>
-        	</g>
-        </g>
-        <g>
-        	<g>
-        		<path class="st0" d="M253.4,301.2c62.2,0,124.3,0,186.5,0c3.2,0,3.2-5,0-5c-62.2,0-124.3,0-186.5,0
-        			C250.2,296.2,250.2,301.2,253.4,301.2L253.4,301.2z"/>
-        	</g>
-        </g>
+
       </g>
 
 
-      <g id="Humidity">
+      <g id="Humidity" >
 
 
+<g id="lines" opacity="0">
+        <path  d="M234.4,134H465.17c9.65,0,9.67-15,0-15H234.4c-9.65,0-9.66,15,0,15Z"  fill="#e78324"/>
+        <path d="M330.84,316.53H520.28c9.65,0,9.67-15,0-15H330.84c-9.65,0-9.66,15,0,15Z"  fill="#e78324"/>
+        <path d="M181.59,255.68H578.83c9.66,0,9.67-15,0-15H181.59c-9.65,0-9.67,15,0,15Z"  fill="#e78324"/>
+        <path d="M32.34,194.83H589.17c9.65,0,9.67-15,0-15H32.34c-9.66,0-9.67,15,0,15Z" fill="#e78324"/>
+</g>
 
-      </g>
+
+</g>
 
 
 
@@ -440,53 +601,95 @@ svg{
 <div class="buttons">
 
 
-  <p id="NorthIsland"> North Island </p>
-  <p id="SouthIsland"> South Island </p>
+  <p id="NorthIsland" > North Island </p>
+  <p id="SouthIsland" >  South Island </p>
 
 <div class="list">
       <div class="months">
           <h2 > Monthly Avg </h2>
-          <p > January </p>
-          <p > February </p>
-          <p > March </p>
-          <p > April </p>
-          <p > May </p>
-          <p > June </p>
-          <p > July </p>
-          <p > August </p>
-          <p > September </p>
-          <p > October </p>
-          <p > November </p>
-          <p > December </p>
+          <p id="Jan"> Janruary </p>
+          <p id="Feb"> February </p>
+          <p id="Mar"> March </p>
+          <p id="Ap"> April </p>
+          <p id="M"> May </p>
+          <p id="Jun"> June </p>
+          <p id="Jul"> July </p>
+          <p id="Aug"> August </p>
+          <p id="Sep"> September </p>
+          <p id="Oct"> October </p>
+          <p id="Nov"> November </p>
+          <p id="Dec"> December </p>
+          <p id="Year"> Year </p>
       </div>
 
 
 
       <div class="months">
           <h2 >Measurement </h2>
-          <p > Humidity </p>
-          <p > Rainfall </p>
-          <p > Sunshine hrs </p>
-          <p > Air Temp </p>
-          <p > All </p>
+          <p id="humid"> Humidity </p>
+          <p id="RF"> Rainfall </p>
+          <p id="Sun"> Sunshine hrs </p>
+          <p id="Air"> Air Temp </p>
+          <p id="all"> All </p>
       </div>
   </div>
 </div>
 
+
+<div class="buttons2">
+
+  <p id="NorthIsland2"> North Island </p>
+  <p id="SouthIsland2"> South Island </p>
+
+
+</div>
+
+
+
+<div class="text">
+  <div class="allData">All Data</div>
+
+
+    <div id="info">
+      <p id="town"> Town </p>
+      <p id="number"> 01 </p>
+
+      <div class="line"> </div>
+      <p>  Rain average: <span id="RAVG">  </span> </p>
+      <p>  Sunshine average: <span id="SAVG">  </span> </p>
+      <p>  Temperature average: <span id="TAVG">  </span> </p>
+      <p>  Humidity average: <span id="HAVG">  </span> </p>
+
+
+
+
+    </div>
+
+</div>
+
 <script>
 
-  json = [
-   {
-     "name": "sally",
-     "age": 23,
-     "grade": "pass"
-   },
-   {
-     "name": "nick",
-     "age": 19,
-     "grade": "fail"
-   }
-  ]
+
+// function town() {
+//   for (var i=0; i <sunshine.length; i++){
+//     var title = document.getElementById('town')
+//     title.innerHTML = sunshine[i][3];
+//     document.getElementById('town').appendChild(title);
+//   }
+// }
+
+
+
+document.getElementById("RAVG").innerHTML = "helloooo";
+document.getElementById("SAVG").innerHTML = "helloooo";
+document.getElementById("TAVG").innerHTML = "helloooo";
+document.getElementById("HAVG").innerHTML = "helloooo";
+
+
+
+
+
+
   // TweenMax.to('#NZ', 1, {x:60, y:-40});
 
 
@@ -495,7 +698,7 @@ function hideNelsons() {
   nelsons = document.querySelectorAll('.nelson');
 
   nelsons.forEach(function(n) {
-    n.style.opacity=0
+    n.style.opacity=1
   })
 }
 
@@ -520,51 +723,2428 @@ this.style.cursor = 'default';
 
 
 
+
+document.getElementById('NorthIsland2').addEventListener('click', function MoveNZ(){
+  TweenMax.to('#everything', 0.8, {x:-405, y:120});
+  hideNelsons();
+  // TweenMax.to('#rain', 0.5, {x:285, y:240});
+  // this.removeEventListener('click', MoveNZ);
+  this.style.cursor = 'default';
+});
+
+document.getElementById('SouthIsland2').addEventListener('click', function MoveNZ(){
+  TweenMax.to('#everything', 0.8, {x:-10, y:-530});
+// TweenMax.to('#NZ', 0.5, {x:320, y:363});
+// TweenMax.to('#rain', 0.5, {x:285, y:240});
+// this.removeEventListener('click', MoveNZ);
+this.style.cursor = 'default';
+});
+
+
+
+
+
+
+// TweenMax.to('#Janruary', 0.3, {opacity: 0});
+// TweenMax.to('#February', 0.3, {opacity: 0});
+// TweenMax.to('#nelson', 0.3, {opacity: 0});
+// TweenMax.to('#March', 0.3, {opacity: 0});
+// TweenMax.to('#April', 0.3, {opacity: 0});
+// TweenMax.to('#May', 0.3, {opacity: 0});
+// TweenMax.to('#June', 0.3, {opacity: 0});
+// TweenMax.to('#July', 0.3, {opacity: 0});
+// TweenMax.to('#August', 0.3, {opacity: 0});
+// TweenMax.to('#September', 0.3, {opacity: 0});
+// TweenMax.to('#October', 0.3, {opacity: 0});
+// TweenMax.to('#November', 0.3, {opacity: 0});
+// TweenMax.to('#December', 0.3, {opacity: 0});
+
+
+
+// document.getElementById('January').addEventListener('mouseover', function hiderest(){
+//   TweenMax.to('#Janruary', 0.3, {opacity: 0.1});
+//
+//   this.style.cursor = 'default';
+//   });
+//
+//
+//   document.getElementById('rain').addEventListener('mouseout', function hiderest(){
+//     TweenMax.to('#Feb', 0.3, {opacity: 1});
+//
+//     this.style.cursor = 'default';
+//     });
+//Hide months
+
+
+document.getElementById('Sun').addEventListener('click', function hideRain(){
+  TweenMax.to('#rain', 0.8, {opacity: 0.2});
+  TweenMax.to('#RF' , 0.1, {color:"white", backgroundColor:"#358f87"});
+  TweenMax.to('#temperature', 0.8, {opacity: 0.2});
+  TweenMax.to('#Air' , 0.1, {color:"white", backgroundColor:"#358f87"});
+  TweenMax.to('#Humidity', 0.8, {opacity: 0.2});
+  TweenMax.to('#humid' , 0.1, {color:"white", backgroundColor:"#358f87"});
+  TweenMax.to('#All' , 0.1, {color:"white", backgroundColor:"#358f87"});
+
+  TweenMax.to('#sunshine', 0.8, {opacity: 1});
+  TweenMax.to('#Sun' , 0.1, {color:"#358f87", backgroundColor:"white"});
+
+  // hideNelsons();
+  // TweenMax.to('#rain', 0.5, {x:285, y:240});
+  // this.removeEventListener('click', MoveNZ);
+  this.style.cursor = 'default';
+
+});
+
+
+
+document.getElementById('RF').addEventListener('click', function hideRain(){
+  TweenMax.to('#rain', 0.8, {opacity: 1});
+  TweenMax.to('#sunshine', 0.8, {opacity: 0.2});
+  TweenMax.to('#RF' , 0.1, {color:"#358f87", backgroundColor:"white"});
+  TweenMax.to('#Sun' , 0.1, {color:"white", backgroundColor:"#358f87"});
+
+
+  TweenMax.to('#temperature', 0.8, {opacity: 0.2});
+  TweenMax.to('#Air' , 0.1, {color:"white", backgroundColor:"#358f87"});
+  TweenMax.to('#Humidity', 0.8, {opacity: 0.2});
+  TweenMax.to('#humid' , 0.1, {color:"white", backgroundColor:"#358f87"});
+  TweenMax.to('#All' , 0.1, {color:"white", backgroundColor:"#358f87"});
+  // hideNelsons();
+  // TweenMax.to('#rain', 0.5, {x:285, y:240});
+  // this.removeEventListener('click', MoveNZ);
+  this.style.cursor = 'default';
+});
+
+
+
+document.getElementById('Air').addEventListener('click', function hideRain(){
+  TweenMax.to('#rain', 0.8, {opacity: 0.2});
+  TweenMax.to('#sunshine', 0.8, {opacity: 0.2});
+  TweenMax.to('#RF' , 0.1, {color:"white", backgroundColor:"#358f87"});
+  TweenMax.to('#Sun' , 0.1, {color:"white", backgroundColor:"#358f87"});
+
+
+  TweenMax.to('#temperature', 0.8, {opacity: 1});
+  TweenMax.to('#Air' , 0.1, {color:"#358f87", backgroundColor:"white"});
+  TweenMax.to('#Humidity', 0.8, {opacity: 0.2});
+  TweenMax.to('#humid' , 0.1, {color:"white", backgroundColor:"#358f87"});
+  TweenMax.to('#All' , 0.1, {color:"white", backgroundColor:"#358f87"});
+  // hideNelsons();
+  // TweenMax.to('#rain', 0.5, {x:285, y:240});
+  // this.removeEventListener('click', MoveNZ);
+  this.style.cursor = 'default';
+});
+
+
+
+document.getElementById('humid').addEventListener('click', function hideRain(){
+  TweenMax.to('#rain', 0.8, {opacity: 0.2});
+  TweenMax.to('#sunshine', 0.8, {opacity: 0.2});
+  TweenMax.to('#RF' , 0.1, {color:"white", backgroundColor:"#358f87"});
+  TweenMax.to('#Sun' , 0.1, {color:"white", backgroundColor:"#358f87"});
+
+
+  TweenMax.to('#temperature', 0.8, {opacity: 0.2});
+  TweenMax.to('#Air' , 0.1, {color:"white", backgroundColor:"#358f87"});
+  TweenMax.to('#Humidity', 0.8, {opacity: 1});
+  TweenMax.to('#humid' , 0.1, {color:"#358f87", backgroundColor:"white"});
+  TweenMax.to('#All' , 0.1, {color:"white", backgroundColor:"#358f87"});
+  // hideNelsons();
+  // TweenMax.to('#rain', 0.5, {x:285, y:240});
+  // this.removeEventListener('click', MoveNZ);
+  this.style.cursor = 'default';
+});
+
+
+
+
+document.getElementById('all').addEventListener('click', function hideRain(){
+  TweenMax.to('#rain', 0.8, {opacity: 1});
+  TweenMax.to('#sunshine', 0.8, {opacity: 1});
+  TweenMax.to('#RF' , 0.1, {color:"white", backgroundColor:"#358f87"});
+  TweenMax.to('#Sun' , 0.1, {color:"white", backgroundColor:"#358f87"});
+
+
+  TweenMax.to('#temperature', 0.8, {opacity: 1});
+  TweenMax.to('#Air' , 0.1, {color:"white", backgroundColor:"#358f87"});
+  TweenMax.to('#Humidity', 0.8, {opacity: 1});
+  TweenMax.to('#humid' , 0.1, {color:"white", backgroundColor:"#358f87"});
+  TweenMax.to('#All' , 0.1, {color:"#358f87", backgroundColor:"white"});
+  // hideNelsons();
+  // TweenMax.to('#rain', 0.5, {x:285, y:240});
+  // this.removeEventListener('click', MoveNZ);
+  this.style.cursor = 'default';
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+document.getElementById('Feb').addEventListener('click', function hiderest(){
+  TweenMax.to('#Feb', 0.2, {color:"#358f87", backgroundColor:"white"});
+
+
+// TweenMax.to('#Janruary', 0.3, {opacity: 0});
+
+TweenMax.to('#Jan', 0.2, {color:"white", backgroundColor:"#358f87"});
+TweenMax.to('#Mar', 0.2, {color:"white", backgroundColor:"#358f87"});
+TweenMax.to('#Ap', 0.2, {color:"white", backgroundColor:"#358f87"});
+TweenMax.to('#M', 0.2, {color:"white", backgroundColor:"#358f87"});
+TweenMax.to('#Jun', 0.2, {color:"white", backgroundColor:"#358f87"});
+TweenMax.to('#Jul', 0.2, {color:"white", backgroundColor:"#358f87"});
+TweenMax.to('#Aug', 0.2, {color:"white", backgroundColor:"#358f87"});
+TweenMax.to('#Sep', 0.2, {color:"white", backgroundColor:"#358f87"});
+TweenMax.to('#Oct', 0.2, {color:"white", backgroundColor:"#358f87"});
+TweenMax.to('#Nov', 0.2, {color:"white", backgroundColor:"#358f87"});
+TweenMax.to('#Dec', 0.2, {color:"white", backgroundColor:"#358f87"});
+TweenMax.to('#Year', 0.2, {color:"white", backgroundColor:"#358f87"});
+
+
+
+
+
+  TweenMax.to('#Janruary', 0.3, {opacity: 0});
+  TweenMax.to('#February', 0.3, {opacity: 1});
+  TweenMax.to('#nelson', 0.3, {opacity: 0});
+  TweenMax.to('#March', 0.3, {opacity: 0});
+  TweenMax.to('#April', 0.3, {opacity: 0});
+  TweenMax.to('#May', 0.3, {opacity: 0});
+  TweenMax.to('#June', 0.3, {opacity: 0});
+  TweenMax.to('#July', 0.3, {opacity: 0});
+  TweenMax.to('#August', 0.3, {opacity: 0});
+  TweenMax.to('#September', 0.3, {opacity: 0});
+  TweenMax.to('#October', 0.3, {opacity: 0});
+  TweenMax.to('#November', 0.3, {opacity: 0});
+  TweenMax.to('#December', 0.3, {opacity: 0});
+  TweenMax.to('#sunshineThree', 0.3, {opacity: 0});
+  TweenMax.to('#rainfall', 0.3, {opacity: 0});
+  TweenMax.to('#H', 0.3, {opacity: 0});
+this.style.cursor = 'default';
+});
+
+
+
+
+document.getElementById('Jan').addEventListener('click', function hiderest(){
+
+  TweenMax.to('#Jan', 0.2, {color:"#358f87", backgroundColor:"white"});
+
+
+
+
+  TweenMax.to('#Feb', 0.2, {color:"white", backgroundColor:"#358f87"});
+  TweenMax.to('#Mar', 0.2, {color:"white", backgroundColor:"#358f87"});
+TweenMax.to('#Ap', 0.2, {color:"white", backgroundColor:"#358f87"});
+TweenMax.to('#M', 0.2, {color:"white", backgroundColor:"#358f87"});
+TweenMax.to('#Jun', 0.2, {color:"white", backgroundColor:"#358f87"});
+TweenMax.to('#Jul', 0.2, {color:"white", backgroundColor:"#358f87"});
+TweenMax.to('#Aug', 0.2, {color:"white", backgroundColor:"#358f87"});
+TweenMax.to('#Sep', 0.2, {color:"white", backgroundColor:"#358f87"});
+TweenMax.to('#Oct', 0.2, {color:"white", backgroundColor:"#358f87"});
+TweenMax.to('#Nov', 0.2, {color:"white", backgroundColor:"#358f87"});
+TweenMax.to('#Dec', 0.2, {color:"white", backgroundColor:"#358f87"});
+TweenMax.to('#Year', 0.2, {color:"white", backgroundColor:"#358f87"});
+
+
+
+
+  TweenMax.to('#Janruary', 0.3, {opacity: 1});
+  TweenMax.to('#February', 0.3, {opacity: 0});
+  TweenMax.to('#nelson', 0.3, {opacity: 0});
+  TweenMax.to('#March', 0.3, {opacity: 0});
+  TweenMax.to('#April', 0.3, {opacity: 0});
+  TweenMax.to('#May', 0.3, {opacity: 0});
+  TweenMax.to('#June', 0.3, {opacity: 0});
+  TweenMax.to('#July', 0.3, {opacity: 0});
+  TweenMax.to('#August', 0.3, {opacity: 0});
+  TweenMax.to('#September', 0.3, {opacity: 0});
+  TweenMax.to('#October', 0.3, {opacity: 0});
+  TweenMax.to('#November', 0.3, {opacity: 0});
+  TweenMax.to('#December', 0.3, {opacity: 0});
+  TweenMax.to('#sunshineThree', 0.3, {opacity: 0});
+  TweenMax.to('#rainfall', 0.3, {opacity: 0});
+  TweenMax.to('#H', 0.3, {opacity: 0});
+this.style.cursor = 'default';
+});
+
+
+
+document.getElementById('Mar').addEventListener('click', function hiderest(){
+
+  TweenMax.to('#Mar', 0.2, {color:"#358f87", backgroundColor:"white"});
+
+
+
+
+  TweenMax.to('#Jan', 0.2, {color:"white", backgroundColor:"#358f87"});
+  TweenMax.to('#Feb', 0.2, {color:"white", backgroundColor:"#358f87"});
+TweenMax.to('#Ap', 0.2, {color:"white", backgroundColor:"#358f87"});
+TweenMax.to('#M', 0.2, {color:"white", backgroundColor:"#358f87"});
+TweenMax.to('#Jun', 0.2, {color:"white", backgroundColor:"#358f87"});
+TweenMax.to('#Jul', 0.2, {color:"white", backgroundColor:"#358f87"});
+TweenMax.to('#Aug', 0.2, {color:"white", backgroundColor:"#358f87"});
+TweenMax.to('#Sep', 0.2, {color:"white", backgroundColor:"#358f87"});
+TweenMax.to('#Oct', 0.2, {color:"white", backgroundColor:"#358f87"});
+TweenMax.to('#Nov', 0.2, {color:"white", backgroundColor:"#358f87"});
+TweenMax.to('#Dec', 0.2, {color:"white", backgroundColor:"#358f87"});
+TweenMax.to('#Year', 0.2, {color:"white", backgroundColor:"#358f87"});
+
+
+
+  TweenMax.to('#Janruary', 0.3, {opacity: 0});
+  TweenMax.to('#February', 0.3, {opacity: 0});
+  TweenMax.to('#nelson', 0.3, {opacity: 0});
+  TweenMax.to('#March', 0.3, {opacity: 1});
+  TweenMax.to('#April', 0.3, {opacity: 0});
+  TweenMax.to('#May', 0.3, {opacity: 0});
+  TweenMax.to('#June', 0.3, {opacity: 0});
+  TweenMax.to('#July', 0.3, {opacity: 0});
+  TweenMax.to('#August', 0.3, {opacity: 0});
+  TweenMax.to('#September', 0.3, {opacity: 0});
+  TweenMax.to('#October', 0.3, {opacity: 0});
+  TweenMax.to('#November', 0.3, {opacity: 0});
+  TweenMax.to('#December', 0.3, {opacity: 0});
+  TweenMax.to('#sunshineThree', 0.3, {opacity: 0});
+  TweenMax.to('#rainfall', 0.3, {opacity: 0});
+  TweenMax.to('#H', 0.3, {opacity: 0});
+this.style.cursor = 'default';
+});
+
+
+document.getElementById('Ap').addEventListener('click', function hiderest(){
+  TweenMax.to('#Ap', 0.2, {color:"#358f87", backgroundColor:"white"});
+
+
+
+
+  TweenMax.to('#Jan', 0.2, {color:"white", backgroundColor:"#358f87"});
+  TweenMax.to('#Mar', 0.2, {color:"white", backgroundColor:"#358f87"});
+TweenMax.to('#Feb', 0.2, {color:"white", backgroundColor:"#358f87"});
+TweenMax.to('#M', 0.2, {color:"white", backgroundColor:"#358f87"});
+TweenMax.to('#Jun', 0.2, {color:"white", backgroundColor:"#358f87"});
+TweenMax.to('#Jul', 0.2, {color:"white", backgroundColor:"#358f87"});
+TweenMax.to('#Aug', 0.2, {color:"white", backgroundColor:"#358f87"});
+TweenMax.to('#Sep', 0.2, {color:"white", backgroundColor:"#358f87"});
+TweenMax.to('#Oct', 0.2, {color:"white", backgroundColor:"#358f87"});
+TweenMax.to('#Nov', 0.2, {color:"white", backgroundColor:"#358f87"});
+TweenMax.to('#Dec', 0.2, {color:"white", backgroundColor:"#358f87"});
+TweenMax.to('#Year', 0.2, {color:"white", backgroundColor:"#358f87"});
+
+  TweenMax.to('#Janruary', 0.3, {opacity: 0});
+  TweenMax.to('#February', 0.3, {opacity: 0});
+  TweenMax.to('#nelson', 0.3, {opacity: 0});
+  TweenMax.to('#March', 0.3, {opacity: 0});
+  TweenMax.to('#April', 0.3, {opacity: 1});
+  TweenMax.to('#May', 0.3, {opacity: 0});
+  TweenMax.to('#June', 0.3, {opacity: 0});
+  TweenMax.to('#July', 0.3, {opacity: 0});
+  TweenMax.to('#August', 0.3, {opacity: 0});
+  TweenMax.to('#September', 0.3, {opacity: 0});
+  TweenMax.to('#October', 0.3, {opacity: 0});
+  TweenMax.to('#November', 0.3, {opacity: 0});
+  TweenMax.to('#December', 0.3, {opacity: 0});
+  TweenMax.to('#sunshineThree', 0.3, {opacity: 0});
+  TweenMax.to('#rainfall', 0.3, {opacity: 0});
+  TweenMax.to('#H', 0.3, {opacity: 0});
+this.style.cursor = 'default';
+});
+
+
+document.getElementById('M').addEventListener('click', function hiderest(){
+  TweenMax.to('#M', 0.2, {color:"#358f87", backgroundColor:"white"});
+
+
+
+
+  TweenMax.to('#Jan', 0.2, {color:"white", backgroundColor:"#358f87"});
+  TweenMax.to('#Mar', 0.2, {color:"white", backgroundColor:"#358f87"});
+TweenMax.to('#Ap', 0.2, {color:"white", backgroundColor:"#358f87"});
+TweenMax.to('#Feb', 0.2, {color:"white", backgroundColor:"#358f87"});
+TweenMax.to('#Jun', 0.2, {color:"white", backgroundColor:"#358f87"});
+TweenMax.to('#Jul', 0.2, {color:"white", backgroundColor:"#358f87"});
+TweenMax.to('#Aug', 0.2, {color:"white", backgroundColor:"#358f87"});
+TweenMax.to('#Sep', 0.2, {color:"white", backgroundColor:"#358f87"});
+TweenMax.to('#Oct', 0.2, {color:"white", backgroundColor:"#358f87"});
+TweenMax.to('#Nov', 0.2, {color:"white", backgroundColor:"#358f87"});
+TweenMax.to('#Dec', 0.2, {color:"white", backgroundColor:"#358f87"});
+TweenMax.to('#Year', 0.2, {color:"white", backgroundColor:"#358f87"});
+
+  TweenMax.to('#Janruary', 0.3, {opacity: 0});
+  TweenMax.to('#February', 0.3, {opacity: 0});
+  TweenMax.to('#nelson', 0.3, {opacity: 0});
+  TweenMax.to('#March', 0.3, {opacity: 0});
+  TweenMax.to('#April', 0.3, {opacity: 0});
+  TweenMax.to('#May', 0.3, {opacity: 1});
+  TweenMax.to('#June', 0.3, {opacity: 0});
+  TweenMax.to('#July', 0.3, {opacity: 0});
+  TweenMax.to('#August', 0.3, {opacity: 0});
+  TweenMax.to('#September', 0.3, {opacity: 0});
+  TweenMax.to('#October', 0.3, {opacity: 0});
+  TweenMax.to('#November', 0.3, {opacity: 0});
+  TweenMax.to('#December', 0.3, {opacity: 0});
+  TweenMax.to('#sunshineThree', 0.3, {opacity: 0});
+  TweenMax.to('#rainfall', 0.3, {opacity: 0});
+  TweenMax.to('#H', 0.3, {opacity: 0});
+this.style.cursor = 'default';
+});
+
+
+document.getElementById('Jun').addEventListener('click', function hiderest(){
+  TweenMax.to('#Jun', 0.2, {color:"#358f87", backgroundColor:"white"});
+
+
+
+
+  TweenMax.to('#Jan', 0.2, {color:"white", backgroundColor:"#358f87"});
+  TweenMax.to('#Mar', 0.2, {color:"white", backgroundColor:"#358f87"});
+TweenMax.to('#Ap', 0.2, {color:"white", backgroundColor:"#358f87"});
+TweenMax.to('#M', 0.2, {color:"white", backgroundColor:"#358f87"});
+TweenMax.to('#Feb', 0.2, {color:"white", backgroundColor:"#358f87"});
+TweenMax.to('#Jul', 0.2, {color:"white", backgroundColor:"#358f87"});
+TweenMax.to('#Aug', 0.2, {color:"white", backgroundColor:"#358f87"});
+TweenMax.to('#Sep', 0.2, {color:"white", backgroundColor:"#358f87"});
+TweenMax.to('#Oct', 0.2, {color:"white", backgroundColor:"#358f87"});
+TweenMax.to('#Nov', 0.2, {color:"white", backgroundColor:"#358f87"});
+TweenMax.to('#Dec', 0.2, {color:"white", backgroundColor:"#358f87"});
+TweenMax.to('#Year', 0.2, {color:"white", backgroundColor:"#358f87"});
+
+
+  TweenMax.to('#Janruary', 0.3, {opacity: 0});
+  TweenMax.to('#February', 0.3, {opacity: 0});
+  TweenMax.to('#nelson', 0.3, {opacity: 0});
+  TweenMax.to('#March', 0.3, {opacity: 0});
+  TweenMax.to('#April', 0.3, {opacity: 0});
+  TweenMax.to('#May', 0.3, {opacity: 0});
+  TweenMax.to('#June', 0.3, {opacity: 1});
+  TweenMax.to('#July', 0.3, {opacity: 0});
+  TweenMax.to('#August', 0.3, {opacity: 0});
+  TweenMax.to('#September', 0.3, {opacity: 0});
+  TweenMax.to('#October', 0.3, {opacity: 0});
+  TweenMax.to('#November', 0.3, {opacity: 0});
+  TweenMax.to('#December', 0.3, {opacity: 0});
+  TweenMax.to('#sunshineThree', 0.3, {opacity: 0});
+  TweenMax.to('#rainfall', 0.3, {opacity: 0});
+  TweenMax.to('#H', 0.3, {opacity: 0});
+this.style.cursor = 'default';
+});
+
+document.getElementById('Jul').addEventListener('click', function hiderest(){
+  TweenMax.to('#Jul', 0.2, {color:"#358f87", backgroundColor:"white"});
+
+
+
+
+  TweenMax.to('#Jan', 0.2, {color:"white", backgroundColor:"#358f87"});
+  TweenMax.to('#Mar', 0.2, {color:"white", backgroundColor:"#358f87"});
+TweenMax.to('#Ap', 0.2, {color:"white", backgroundColor:"#358f87"});
+TweenMax.to('#M', 0.2, {color:"white", backgroundColor:"#358f87"});
+TweenMax.to('#Jun', 0.2, {color:"white", backgroundColor:"#358f87"});
+TweenMax.to('#Feb', 0.2, {color:"white", backgroundColor:"#358f87"});
+TweenMax.to('#Aug', 0.2, {color:"white", backgroundColor:"#358f87"});
+TweenMax.to('#Sep', 0.2, {color:"white", backgroundColor:"#358f87"});
+TweenMax.to('#Oct', 0.2, {color:"white", backgroundColor:"#358f87"});
+TweenMax.to('#Nov', 0.2, {color:"white", backgroundColor:"#358f87"});
+TweenMax.to('#Dec', 0.2, {color:"white", backgroundColor:"#358f87"});
+TweenMax.to('#Year', 0.2, {color:"white", backgroundColor:"#358f87"});
+
+
+  TweenMax.to('#Janruary', 0.3, {opacity: 0});
+  TweenMax.to('#February', 0.3, {opacity: 0});
+  TweenMax.to('#nelson', 0.3, {opacity: 0});
+  TweenMax.to('#March', 0.3, {opacity: 0});
+  TweenMax.to('#April', 0.3, {opacity: 0});
+  TweenMax.to('#May', 0.3, {opacity: 0});
+  TweenMax.to('#June', 0.3, {opacity: 0});
+  TweenMax.to('#July', 0.3, {opacity: 1});
+  TweenMax.to('#August', 0.3, {opacity: 0});
+  TweenMax.to('#September', 0.3, {opacity: 0});
+  TweenMax.to('#October', 0.3, {opacity: 0});
+  TweenMax.to('#November', 0.3, {opacity: 0});
+  TweenMax.to('#December', 0.3, {opacity: 0});
+  TweenMax.to('#sunshineThree', 0.3, {opacity: 0});
+  TweenMax.to('#rainfall', 0.3, {opacity: 0});
+  TweenMax.to('#H', 0.3, {opacity: 0});
+this.style.cursor = 'default';
+});
+
+
+document.getElementById('Aug').addEventListener('click', function hiderest(){
+  TweenMax.to('#Aug', 0.2, {color:"#358f87", backgroundColor:"white"});
+
+
+
+
+  TweenMax.to('#Jan', 0.2, {color:"white", backgroundColor:"#358f87"});
+  TweenMax.to('#Mar', 0.2, {color:"white", backgroundColor:"#358f87"});
+TweenMax.to('#Ap', 0.2, {color:"white", backgroundColor:"#358f87"});
+TweenMax.to('#M', 0.2, {color:"white", backgroundColor:"#358f87"});
+TweenMax.to('#Jun', 0.2, {color:"white", backgroundColor:"#358f87"});
+TweenMax.to('#Jul', 0.2, {color:"white", backgroundColor:"#358f87"});
+TweenMax.to('#Feb', 0.2, {color:"white", backgroundColor:"#358f87"});
+TweenMax.to('#Sep', 0.2, {color:"white", backgroundColor:"#358f87"});
+TweenMax.to('#Oct', 0.2, {color:"white", backgroundColor:"#358f87"});
+TweenMax.to('#Nov', 0.2, {color:"white", backgroundColor:"#358f87"});
+TweenMax.to('#Dec', 0.2, {color:"white", backgroundColor:"#358f87"});
+TweenMax.to('#Year', 0.2, {color:"white", backgroundColor:"#358f87"});
+
+
+  TweenMax.to('#Janruary', 0.3, {opacity: 0});
+  TweenMax.to('#February', 0.3, {opacity: 0});
+  TweenMax.to('#nelson', 0.3, {opacity: 0});
+  TweenMax.to('#March', 0.3, {opacity: 0});
+  TweenMax.to('#April', 0.3, {opacity: 0});
+  TweenMax.to('#May', 0.3, {opacity: 0});
+  TweenMax.to('#June', 0.3, {opacity: 0});
+  TweenMax.to('#July', 0.3, {opacity: 0});
+  TweenMax.to('#August', 0.3, {opacity: 1});
+  TweenMax.to('#September', 0.3, {opacity: 0});
+  TweenMax.to('#October', 0.3, {opacity: 0});
+  TweenMax.to('#November', 0.3, {opacity: 0});
+  TweenMax.to('#December', 0.3, {opacity: 0});
+  TweenMax.to('#sunshineThree', 0.3, {opacity: 0});
+  TweenMax.to('#rainfall', 0.3, {opacity: 0});
+  TweenMax.to('#H', 0.3, {opacity: 0});
+this.style.cursor = 'default';
+});
+
+
+document.getElementById('Sep').addEventListener('click', function hiderest(){
+  TweenMax.to('#Sep', 0.2, {color:"#358f87", backgroundColor:"white"});
+
+
+
+
+  TweenMax.to('#Jan', 0.2, {color:"white", backgroundColor:"#358f87"});
+  TweenMax.to('#Mar', 0.2, {color:"white", backgroundColor:"#358f87"});
+TweenMax.to('#Ap', 0.2, {color:"white", backgroundColor:"#358f87"});
+TweenMax.to('#M', 0.2, {color:"white", backgroundColor:"#358f87"});
+TweenMax.to('#Jun', 0.2, {color:"white", backgroundColor:"#358f87"});
+TweenMax.to('#Jul', 0.2, {color:"white", backgroundColor:"#358f87"});
+TweenMax.to('#Aug', 0.2, {color:"white", backgroundColor:"#358f87"});
+TweenMax.to('#Feb', 0.2, {color:"white", backgroundColor:"#358f87"});
+TweenMax.to('#Oct', 0.2, {color:"white", backgroundColor:"#358f87"});
+TweenMax.to('#Nov', 0.2, {color:"white", backgroundColor:"#358f87"});
+TweenMax.to('#Dec', 0.2, {color:"white", backgroundColor:"#358f87"});
+TweenMax.to('#Year', 0.2, {color:"white", backgroundColor:"#358f87"});
+
+
+  TweenMax.to('#Janruary', 0.3, {opacity: 0});
+  TweenMax.to('#February', 0.3, {opacity: 0});
+  TweenMax.to('#nelson', 0.3, {opacity: 0});
+  TweenMax.to('#March', 0.3, {opacity: 0});
+  TweenMax.to('#April', 0.3, {opacity: 0});
+  TweenMax.to('#May', 0.3, {opacity: 0});
+  TweenMax.to('#June', 0.3, {opacity: 0});
+  TweenMax.to('#July', 0.3, {opacity: 0});
+  TweenMax.to('#August', 0.3, {opacity: 0});
+  TweenMax.to('#September', 0.3, {opacity: 1});
+  TweenMax.to('#October', 0.3, {opacity: 0});
+  TweenMax.to('#November', 0.3, {opacity: 0});
+  TweenMax.to('#December', 0.3, {opacity: 0});
+  TweenMax.to('#sunshineThree', 0.3, {opacity: 0});
+  TweenMax.to('#rainfall', 0.3, {opacity: 0});
+  TweenMax.to('#H', 0.3, {opacity: 0});
+this.style.cursor = 'default';
+});
+
+document.getElementById('Oct').addEventListener('click', function hiderest(){
+  TweenMax.to('#Oct', 0.2, {color:"#358f87", backgroundColor:"white"});
+
+
+
+
+  TweenMax.to('#Jan', 0.2, {color:"white", backgroundColor:"#358f87"});
+  TweenMax.to('#Mar', 0.2, {color:"white", backgroundColor:"#358f87"});
+TweenMax.to('#Ap', 0.2, {color:"white", backgroundColor:"#358f87"});
+TweenMax.to('#M', 0.2, {color:"white", backgroundColor:"#358f87"});
+TweenMax.to('#Jun', 0.2, {color:"white", backgroundColor:"#358f87"});
+TweenMax.to('#Jul', 0.2, {color:"white", backgroundColor:"#358f87"});
+TweenMax.to('#Aug', 0.2, {color:"white", backgroundColor:"#358f87"});
+TweenMax.to('#Sep', 0.2, {color:"white", backgroundColor:"#358f87"});
+TweenMax.to('#Feb', 0.2, {color:"white", backgroundColor:"#358f87"});
+TweenMax.to('#Nov', 0.2, {color:"white", backgroundColor:"#358f87"});
+TweenMax.to('#Dec', 0.2, {color:"white", backgroundColor:"#358f87"});
+TweenMax.to('#Year', 0.2, {color:"white", backgroundColor:"#358f87"});
+  TweenMax.to('#Janruary', 0.3, {opacity: 0});
+  TweenMax.to('#February', 0.3, {opacity: 0});
+  TweenMax.to('#nelson', 0.3, {opacity: 0});
+  TweenMax.to('#March', 0.3, {opacity: 0});
+  TweenMax.to('#April', 0.3, {opacity: 0});
+  TweenMax.to('#May', 0.3, {opacity: 0});
+  TweenMax.to('#June', 0.3, {opacity: 0});
+  TweenMax.to('#July', 0.3, {opacity: 0});
+  TweenMax.to('#August', 0.3, {opacity: 0});
+  TweenMax.to('#September', 0.3, {opacity: 0});
+  TweenMax.to('#October', 0.3, {opacity: 1});
+  TweenMax.to('#November', 0.3, {opacity: 0});
+  TweenMax.to('#December', 0.3, {opacity: 0});
+  TweenMax.to('#sunshineThree', 0.3, {opacity: 0});
+  TweenMax.to('#rainfall', 0.3, {opacity: 0});
+  TweenMax.to('#H', 0.3, {opacity: 0});
+this.style.cursor = 'default';
+});
+
+
+
+document.getElementById('Nov').addEventListener('click', function hiderest(){
+  TweenMax.to('#Nov', 0.2, {color:"#358f87", backgroundColor:"white"});
+
+
+
+
+  TweenMax.to('#Jan', 0.2, {color:"white", backgroundColor:"#358f87"});
+  TweenMax.to('#Mar', 0.2, {color:"white", backgroundColor:"#358f87"});
+TweenMax.to('#Ap', 0.2, {color:"white", backgroundColor:"#358f87"});
+TweenMax.to('#M', 0.2, {color:"white", backgroundColor:"#358f87"});
+TweenMax.to('#Jun', 0.2, {color:"white", backgroundColor:"#358f87"});
+TweenMax.to('#Jul', 0.2, {color:"white", backgroundColor:"#358f87"});
+TweenMax.to('#Aug', 0.2, {color:"white", backgroundColor:"#358f87"});
+TweenMax.to('#Sep', 0.2, {color:"white", backgroundColor:"#358f87"});
+TweenMax.to('#Oct', 0.2, {color:"white", backgroundColor:"#358f87"});
+TweenMax.to('#Feb', 0.2, {color:"white", backgroundColor:"#358f87"});
+TweenMax.to('#Dec', 0.2, {color:"white", backgroundColor:"#358f87"});
+TweenMax.to('#Year', 0.2, {color:"white", backgroundColor:"#358f87"});
+
+  TweenMax.to('#Janruary', 0.3, {opacity: 0});
+  TweenMax.to('#February', 0.3, {opacity: 0});
+  TweenMax.to('#nelson', 0.3, {opacity: 0});
+  TweenMax.to('#March', 0.3, {opacity: 0});
+  TweenMax.to('#April', 0.3, {opacity: 0});
+  TweenMax.to('#May', 0.3, {opacity: 0});
+  TweenMax.to('#June', 0.3, {opacity: 0});
+  TweenMax.to('#July', 0.3, {opacity: 0});
+  TweenMax.to('#August', 0.3, {opacity: 0});
+  TweenMax.to('#September', 0.3, {opacity: 0});
+  TweenMax.to('#October', 0.3, {opacity: 0});
+  TweenMax.to('#November', 0.3, {opacity: 1});
+  TweenMax.to('#December', 0.3, {opacity: 0});
+  TweenMax.to('#sunshineThree', 0.3, {opacity: 0});
+  TweenMax.to('#rainfall', 0.3, {opacity: 0});
+  TweenMax.to('#H', 0.3, {opacity: 0});
+this.style.cursor = 'default';
+});
+
+
+document.getElementById('Dec').addEventListener('click', function hiderest(){
+  TweenMax.to('#Dec', 0.2, {color:"#358f87", backgroundColor:"white"});
+
+
+
+
+  TweenMax.to('#Jan', 0.2, {color:"white", backgroundColor:"#358f87"});
+  TweenMax.to('#Mar', 0.2, {color:"white", backgroundColor:"#358f87"});
+TweenMax.to('#Ap', 0.2, {color:"white", backgroundColor:"#358f87"});
+TweenMax.to('#M', 0.2, {color:"white", backgroundColor:"#358f87"});
+TweenMax.to('#Jun', 0.2, {color:"white", backgroundColor:"#358f87"});
+TweenMax.to('#Jul', 0.2, {color:"white", backgroundColor:"#358f87"});
+TweenMax.to('#Aug', 0.2, {color:"white", backgroundColor:"#358f87"});
+TweenMax.to('#Sep', 0.2, {color:"white", backgroundColor:"#358f87"});
+TweenMax.to('#Oct', 0.2, {color:"white", backgroundColor:"#358f87"});
+TweenMax.to('#Nov', 0.2, {color:"white", backgroundColor:"#358f87"});
+TweenMax.to('#Feb', 0.2, {color:"white", backgroundColor:"#358f87"});
+TweenMax.to('#Year', 0.2, {color:"white", backgroundColor:"#358f87"});
+
+  TweenMax.to('#Janruary', 0.3, {opacity: 0});
+  TweenMax.to('#February', 0.3, {opacity: 0});
+  TweenMax.to('#nelson', 0.3, {opacity: 0});
+  TweenMax.to('#March', 0.3, {opacity: 0});
+  TweenMax.to('#April', 0.3, {opacity: 0});
+  TweenMax.to('#May', 0.3, {opacity: 0});
+  TweenMax.to('#June', 0.3, {opacity: 0});
+  TweenMax.to('#July', 0.3, {opacity: 0});
+  TweenMax.to('#August', 0.3, {opacity: 0});
+  TweenMax.to('#September', 0.3, {opacity: 0});
+  TweenMax.to('#October', 0.3, {opacity: 0});
+  TweenMax.to('#November', 0.3, {opacity: 0});
+  TweenMax.to('#December', 0.3, {opacity: 1});
+  TweenMax.to('#sunshineThree', 0.3, {opacity: 0});
+  TweenMax.to('#rainfall', 0.3, {opacity: 0});
+  TweenMax.to('#H', 0.3, {opacity: 0});
+this.style.cursor = 'default';
+});
+
+
+document.getElementById('Year').addEventListener('click', function hiderest(){
+  TweenMax.to('#Year', 0.2, {color:"#358f87", backgroundColor:"white"});
+
+
+
+
+  TweenMax.to('#Jan', 0.2, {color:"white", backgroundColor:"#358f87"});
+  TweenMax.to('#Mar', 0.2, {color:"white", backgroundColor:"#358f87"});
+TweenMax.to('#Ap', 0.2, {color:"white", backgroundColor:"#358f87"});
+TweenMax.to('#M', 0.2, {color:"white", backgroundColor:"#358f87"});
+TweenMax.to('#Jun', 0.2, {color:"white", backgroundColor:"#358f87"});
+TweenMax.to('#Jul', 0.2, {color:"white", backgroundColor:"#358f87"});
+TweenMax.to('#Aug', 0.2, {color:"white", backgroundColor:"#358f87"});
+TweenMax.to('#Sep', 0.2, {color:"white", backgroundColor:"#358f87"});
+TweenMax.to('#Oct', 0.2, {color:"white", backgroundColor:"#358f87"});
+TweenMax.to('#Nov', 0.2, {color:"white", backgroundColor:"#358f87"});
+TweenMax.to('#Dec', 0.2, {color:"white", backgroundColor:"#358f87"});
+TweenMax.to('#Feb', 0.2, {color:"white", backgroundColor:"#358f87"});
+
+
+
+
+
+TweenMax.to('#Janruary', 0.3, {opacity: 0});
+TweenMax.to('#February', 0.3, {opacity: 0});
+TweenMax.to('#nelson', 0.3, {opacity: 0});
+TweenMax.to('#March', 0.3, {opacity: 0});
+TweenMax.to('#April', 0.3, {opacity: 0});
+TweenMax.to('#May', 0.3, {opacity: 0});
+TweenMax.to('#June', 0.3, {opacity: 0});
+TweenMax.to('#July', 0.3, {opacity: 0});
+TweenMax.to('#August', 0.3, {opacity: 0});
+TweenMax.to('#September', 0.3, {opacity: 0});
+TweenMax.to('#October', 0.3, {opacity: 0});
+TweenMax.to('#November', 0.3, {opacity: 0});
+TweenMax.to('#December', 0.3, {opacity: 0});
+TweenMax.to('#sunshineThree', 0.3, {opacity: 1});
+  TweenMax.to('#rainfall', 0.3, {opacity: 1});
+  TweenMax.to('#H', 0.3, {opacity: 1});
+this.style.cursor = 'default';
+});
+
+
+
+
+
+
+//show Months
+
+
+// document.getElementsByTagName('')
+
+
+
+
+
+//Tempreture
+
+Temp = [];
+TempJanuary = [];
+TempFebruary = [];
+TempMarch = [];
+TempApril = [];
+TempMay = [];
+TempJune = [];
+TempJuly = [];
+TempAugust = [];
+TempSeptember = [];
+TempOctober = [];
+TempNovember = [];
+TempDecember = [];
+
+
+
+
+function drawTemp() {
+  for (var i=0; i <Temp.length; i++) {
+
+    // console.log('h: ' + Humidity[i][15]);
+    var Temp_line = document.getElementById('lines');
+    var Tmp = Temp_line.cloneNode(true);
+
+    translate = ((Temp[i][15])-110) + ',' + ((Temp[i][16])-20);
+    scale = Temp[i][14] / ( Temp[i][14] + 195);
+
+    humid.setAttribute('id', 'H');
+    humid.setAttribute('transform', 'translate('+translate+')' + ' scale('+scale+')');
+    humid.setAttribute('opacity', 1);
+
+
+
+    // text = document.getElementById('text' + Humidity[i][1]);
+    // text.querySelector('.info').innerHTML = Humidity[i][14];
+
+
+
+    document.getElementById('Humidity').appendChild(humid);
+  }
+}
+
+var getHumidity = new XMLHttpRequest();
+getHumidity.onreadystatechange = function() {
+  if (this.readyState == 4 && this.status == 200) {
+    Humidity = JSON.parse(getHumidity.responseText);
+    drawHumidity();
+  }
+  else {
+      console.log(this.readyState, this.status);
+  }
+};
+getHumidity.open('GET', '/Humidity');
+getHumidity.send();
+
+
+
+
+
+
+
+
+
+
+
+
+
 //Humidity
 
-var humidity_line = document.createElementNS('http://www.w3.org/2000/svg','line')
+Humidity = [];
+HumidityJanuary = [];
+HumidityFebruary = [];
+HumidityMarch = [];
+HumidityApril = [];
+HumidityMay = [];
+HumidityJune = [];
+HumidityJuly = [];
+HumidityAugust = [];
+HumiditySeptember = [];
+HumidityOctober = [];
+HumidityNovember = [];
+HumidityDecember = [];
 
-humidity_line.setAttribute('transform', "scale(0.1, 0.1)");
 
-document.getElementById('Humidity').appendChild(humidity_line);
+
+
+function drawHumidity() {
+  for (var i=0; i <Humidity.length; i++) {
+
+    // console.log('h: ' + Humidity[i][15]);
+    var humidity_line = document.getElementById('lines');
+    var humid = humidity_line.cloneNode(true);
+
+    translate = ((Humidity[i][15])-110) + ',' + ((Humidity[i][16])-20);
+    scale = Humidity[i][14] / ( Humidity[i][14] + 195);
+
+    humid.setAttribute('id', 'H');
+    humid.setAttribute('transform', 'translate('+translate+')' + ' scale('+scale+')');
+    humid.setAttribute('opacity', 1);
+
+
+
+    // text = document.getElementById('text' + Humidity[i][1]);
+    // text.querySelector('.info').innerHTML = Humidity[i][14];
+
+
+
+    document.getElementById('Humidity').appendChild(humid);
+  }
+}
+
+var getHumidity = new XMLHttpRequest();
+getHumidity.onreadystatechange = function() {
+  if (this.readyState == 4 && this.status == 200) {
+    Humidity = JSON.parse(getHumidity.responseText);
+    drawHumidity();
+  }
+  else {
+      console.log(this.readyState, this.status);
+  }
+};
+getHumidity.open('GET', '/Humidity');
+getHumidity.send();
+
+
+
+
+
+
+
+
+
+function drawHumidityJanuary() {
+  for (var i=0; i <HumidityJanuary.length; i++) {
+
+    // console.log('h: ' + Humidity[i][15]);
+    var humidity_line = document.getElementById('lines');
+    var humid = humidity_line.cloneNode(true);
+
+    translate = ((HumidityJanuary[i][15])-70) + ',' + ((HumidityJanuary[i][16])-20);
+    scale = Humidity[i][2] / ( Humidity[i][2] + 195);
+
+
+    humid.setAttribute('transform', 'translate('+translate+')' + ' scale('+scale+')');
+    humid.setAttribute('opacity', 0);
+    humid.setAttribute('id', 'Janruary');
+
+
+    // text = document.getElementById('text' + Humidity[i][1]);
+    // text.querySelector('.info').innerHTML = Humidity[i][14];
+
+
+
+    document.getElementById('Humidity').appendChild(humid);
+  }
+}
+
+var getHumidityJanuary = new XMLHttpRequest();
+getHumidityJanuary.onreadystatechange = function() {
+  if (this.readyState == 4 && this.status == 200) {
+    HumidityJanuary = JSON.parse(getHumidityJanuary.responseText);
+    drawHumidityJanuary();
+  }
+  else {
+      console.log(this.readyState, this.status);
+  }
+};
+getHumidityJanuary.open('GET', '/HumidityJanuary');
+getHumidityJanuary.send();
+
+
+
+
+
+
+
+
+function drawHumidityFebruary() {
+  for (var i=0; i <HumidityFebruary.length; i++) {
+
+    // console.log('h: ' + Humidity[i][15]);
+    var humidity_line = document.getElementById('lines');
+    var humid = humidity_line.cloneNode(true);
+
+    translate = ((HumidityFebruary[i][15])-70) + ',' + ((HumidityFebruary[i][16])-20);
+    scale = Humidity[i][3] / ( Humidity[i][3] + 195);
+
+
+    humid.setAttribute('transform', 'translate('+translate+')' + ' scale('+scale+')');
+    humid.setAttribute('opacity', 0);
+    humid.setAttribute('id', 'February');
+
+
+    // text = document.getElementById('text' + Humidity[i][1]);
+    // text.querySelector('.info').innerHTML = Humidity[i][14];
+
+
+
+    document.getElementById('Humidity').appendChild(humid);
+  }
+}
+
+var getHumidityFebruary = new XMLHttpRequest();
+getHumidityFebruary.onreadystatechange = function() {
+  if (this.readyState == 4 && this.status == 200) {
+    HumidityFebruary = JSON.parse(getHumidityFebruary.responseText);
+    drawHumidityFebruary();
+  }
+  else {
+      console.log(this.readyState, this.status);
+  }
+};
+getHumidityFebruary.open('GET', '/HumidityFebruary');
+getHumidityFebruary.send();
+
+
+
+
+
+
+
+function drawHumidityMarch() {
+  for (var i=0; i <HumidityMarch.length; i++) {
+
+    // console.log('h: ' + Humidity[i][15]);
+    var humidity_line = document.getElementById('lines');
+    var humid = humidity_line.cloneNode(true);
+
+    translate = ((HumidityMarch[i][15])-70) + ',' + ((HumidityMarch[i][16])-20);
+    scale = Humidity[i][4] / ( Humidity[i][4] + 195);
+
+
+    humid.setAttribute('transform', 'translate('+translate+')' + ' scale('+scale+')');
+    humid.setAttribute('opacity', 0);
+    humid.setAttribute('id', 'March');
+
+
+    // text = document.getElementById('text' + Humidity[i][1]);
+    // text.querySelector('.info').innerHTML = Humidity[i][14];
+
+
+
+    document.getElementById('Humidity').appendChild(humid);
+  }
+}
+
+var getHumidityMarch = new XMLHttpRequest();
+getHumidityMarch.onreadystatechange = function() {
+  if (this.readyState == 4 && this.status == 200) {
+    HumidityMarch = JSON.parse(getHumidityMarch.responseText);
+    drawHumidityMarch();
+  }
+  else {
+      console.log(this.readyState, this.status);
+  }
+};
+getHumidityMarch.open('GET', '/HumidityMarch');
+getHumidityMarch.send();
+
+
+
+
+
+
+
+
+function drawHumidityApril() {
+  for (var i=0; i <HumidityApril.length; i++) {
+
+    // console.log('h: ' + Humidity[i][15]);
+    var humidity_line = document.getElementById('lines');
+    var humid = humidity_line.cloneNode(true);
+
+    translate = ((HumidityApril[i][15])-70) + ',' + ((HumidityApril[i][16])-20);
+    scale = Humidity[i][5] / ( Humidity[i][5] + 195);
+
+
+    humid.setAttribute('transform', 'translate('+translate+')' + ' scale('+scale+')');
+    humid.setAttribute('opacity', 0);
+    humid.setAttribute('id', 'April');
+
+
+    // text = document.getElementById('text' + Humidity[i][1]);
+    // text.querySelector('.info').innerHTML = Humidity[i][14];
+
+
+
+    document.getElementById('Humidity').appendChild(humid);
+  }
+}
+
+var getHumidityApril = new XMLHttpRequest();
+getHumidityApril.onreadystatechange = function() {
+  if (this.readyState == 4 && this.status == 200) {
+    HumidityApril = JSON.parse(getHumidityApril.responseText);
+    drawHumidityApril();
+  }
+  else {
+      console.log(this.readyState, this.status);
+  }
+};
+getHumidityApril.open('GET', '/HumidityApril');
+getHumidityApril.send();
+
+
+
+
+
+
+
+
+function drawHumidityMay() {
+  for (var i=0; i <HumidityMay.length; i++) {
+
+    // console.log('h: ' + Humidity[i][15]);
+    var humidity_line = document.getElementById('lines');
+    var humid = humidity_line.cloneNode(true);
+
+    translate = ((HumidityMay[i][15])-70) + ',' + ((HumidityMay[i][16])-20);
+    scale = Humidity[i][6] / ( Humidity[i][6] + 195);
+
+
+    humid.setAttribute('transform', 'translate('+translate+')' + ' scale('+scale+')');
+    humid.setAttribute('opacity', 0);
+    humid.setAttribute('id', 'May');
+
+
+    // text = document.getElementById('text' + Humidity[i][1]);
+    // text.querySelector('.info').innerHTML = Humidity[i][14];
+
+
+
+    document.getElementById('Humidity').appendChild(humid);
+  }
+}
+
+var getHumidityMay = new XMLHttpRequest();
+getHumidityMay.onreadystatechange = function() {
+  if (this.readyState == 4 && this.status == 200) {
+    HumidityMay = JSON.parse(getHumidityMay.responseText);
+    drawHumidityMay();
+  }
+  else {
+      console.log(this.readyState, this.status);
+  }
+};
+getHumidityMay.open('GET', '/HumidityMay');
+getHumidityMay.send();
+
+
+
+
+
+
+
+function drawHumidityJune() {
+  for (var i=0; i <HumidityJune.length; i++) {
+
+    // console.log('h: ' + Humidity[i][15]);
+    var humidity_line = document.getElementById('lines');
+    var humid = humidity_line.cloneNode(true);
+
+    translate = ((HumidityJune[i][15])-70) + ',' + ((HumidityJune[i][16])-20);
+    scale = Humidity[i][7] / ( Humidity[i][7] + 195);
+
+
+    humid.setAttribute('transform', 'translate('+translate+')' + ' scale('+scale+')');
+    humid.setAttribute('opacity', 0);
+
+    humid.setAttribute('id', 'June' );
+
+
+    // text = document.getElementById('text' + Humidity[i][1]);
+    // text.querySelector('.info').innerHTML = Humidity[i][14];
+
+
+
+    document.getElementById('Humidity').appendChild(humid);
+  }
+}
+
+var getHumidityJune = new XMLHttpRequest();
+getHumidityJune.onreadystatechange = function() {
+  if (this.readyState == 4 && this.status == 200) {
+    HumidityJune = JSON.parse(getHumidityJune.responseText);
+    drawHumidityJune();
+  }
+  else {
+      console.log(this.readyState, this.status);
+  }
+};
+getHumidityJune.open('GET', '/HumidityJune');
+getHumidityJune.send();
+
+
+
+
+
+
+
+
+
+
+
+function drawHumidityJuly() {
+  for (var i=0; i <HumidityJuly.length; i++) {
+
+    // console.log('h: ' + Humidity[i][15]);
+    var humidity_line = document.getElementById('lines');
+    var humid = humidity_line.cloneNode(true);
+
+    translate = ((HumidityJuly[i][15])-70) + ',' + ((HumidityJuly[i][16])-20);
+    scale = Humidity[i][8] / ( Humidity[i][8] + 195);
+
+
+    humid.setAttribute('transform', 'translate('+translate+')' + ' scale('+scale+')');
+    humid.setAttribute('opacity', 0);
+    humid.setAttribute('id', 'July');
+
+
+    // text = document.getElementById('text' + Humidity[i][1]);
+    // text.querySelector('.info').innerHTML = Humidity[i][14];
+
+
+
+    document.getElementById('Humidity').appendChild(humid);
+  }
+}
+
+var getHumidityJuly = new XMLHttpRequest();
+getHumidityJune.onreadystatechange = function() {
+  if (this.readyState == 4 && this.status == 200) {
+    HumidityJuly = JSON.parse(getHumidityJuly.responseText);
+    drawHumidityJuly();
+  }
+  else {
+      console.log(this.readyState, this.status);
+  }
+};
+getHumidityJuly.open('GET', '/HumidityJuly');
+getHumidityJuly.send();
+
+
+
+
+function drawHumidityAugust() {
+  for (var i=0; i <HumidityAugust.length; i++) {
+
+    // console.log('h: ' + Humidity[i][15]);
+    var humidity_line = document.getElementById('lines');
+    var humid = humidity_line.cloneNode(true);
+
+    translate = ((HumidityAugust[i][15])-70) + ',' + ((HumidityAugust[i][16])-20);
+    scale = Humidity[i][9] / ( Humidity[i][9] + 195);
+
+
+    humid.setAttribute('transform', 'translate('+translate+')' + ' scale('+scale+')');
+    humid.setAttribute('opacity', 0);
+      humid.setAttribute('id', 'August');
+
+
+    // text = document.getElementById('text' + Humidity[i][1]);
+    // text.querySelector('.info').innerHTML = Humidity[i][14];
+
+
+
+    document.getElementById('Humidity').appendChild(humid);
+  }
+}
+
+var getHumidityAugust = new XMLHttpRequest();
+getHumidityAugust.onreadystatechange = function() {
+  if (this.readyState == 4 && this.status == 200) {
+    HumidityAugust = JSON.parse(getHumidityAugust.responseText);
+    drawHumidityAugust();
+  }
+  else {
+      console.log(this.readyState, this.status);
+  }
+};
+getHumidityAugust.open('GET', '/HumidityAugust');
+getHumidityAugust.send();
+
+
+
+
+
+
+
+
+function drawHumiditySeptember() {
+  for (var i=0; i <HumiditySeptember.length; i++) {
+
+    // console.log('h: ' + Humidity[i][15]);
+    var humidity_line = document.getElementById('lines');
+    var humid = humidity_line.cloneNode(true);
+
+    translate = ((HumiditySeptember[i][15])-70) + ',' + ((HumiditySeptember[i][16])-20);
+    scale = Humidity[i][10] / ( Humidity[i][10] + 195);
+
+
+    humid.setAttribute('transform', 'translate('+translate+')' + ' scale('+scale+')');
+    humid.setAttribute('opacity', 0);
+      humid.setAttribute('id', 'September');
+
+
+    // text = document.getElementById('text' + Humidity[i][1]);
+    // text.querySelector('.info').innerHTML = Humidity[i][14];
+
+
+
+    document.getElementById('Humidity').appendChild(humid);
+  }
+}
+
+var getHumiditySeptember = new XMLHttpRequest();
+getHumiditySeptember.onreadystatechange = function() {
+  if (this.readyState == 4 && this.status == 200) {
+    HumiditySeptember = JSON.parse(getHumiditySeptember.responseText);
+    drawHumiditySeptember();
+  }
+  else {
+      console.log(this.readyState, this.status);
+  }
+};
+getHumiditySeptember.open('GET', '/HumiditySeptember');
+getHumiditySeptember.send();
+
+
+
+
+
+
+function drawHumidityOctober() {
+  for (var i=0; i <HumidityOctober.length; i++) {
+
+    // console.log('h: ' + Humidity[i][15]);
+    var humidity_line = document.getElementById('lines');
+    var humid = humidity_line.cloneNode(true);
+
+    translate = ((HumidityOctober[i][15])-70) + ',' + ((HumidityOctober[i][16])-20);
+    scale = Humidity[i][11] / ( Humidity[i][11] + 195);
+
+
+    humid.setAttribute('transform', 'translate('+translate+')' + ' scale('+scale+')');
+    humid.setAttribute('opacity', 0);
+    humid.setAttribute('id', 'October');
+
+
+    // text = document.getElementById('text' + Humidity[i][1]);
+    // text.querySelector('.info').innerHTML = Humidity[i][14];
+
+
+
+    document.getElementById('Humidity').appendChild(humid);
+  }
+}
+
+var getHumidityOctober = new XMLHttpRequest();
+getHumidityOctober.onreadystatechange = function() {
+  if (this.readyState == 4 && this.status == 200) {
+    HumidityOctober = JSON.parse(getHumidityOctober.responseText);
+    drawHumidityOctober();
+  }
+  else {
+      console.log(this.readyState, this.status);
+  }
+};
+getHumidityOctober.open('GET', '/HumidityOctober');
+getHumidityOctober.send();
+
+
+
+
+
+
+
+function drawHumidityNovember() {
+  for (var i=0; i <HumidityNovember.length; i++) {
+
+    // console.log('h: ' + Humidity[i][15]);
+    var humidity_line = document.getElementById('lines');
+    var humid = humidity_line.cloneNode(true);
+
+    translate = ((HumidityNovember[i][15])-70) + ',' + ((HumidityNovember[i][16])-20);
+    scale = Humidity[i][12] / ( Humidity[i][12] + 195);
+
+      humid.setAttribute('id', 'November');
+    humid.setAttribute('transform', 'translate('+translate+')' + ' scale('+scale+')');
+    humid.setAttribute('opacity', 0);
+
+
+
+    // text = document.getElementById('text' + Humidity[i][1]);
+    // text.querySelector('.info').innerHTML = Humidity[i][14];
+
+
+
+    document.getElementById('Humidity').appendChild(humid);
+  }
+}
+
+var getHumidityNovember = new XMLHttpRequest();
+getHumidityNovember.onreadystatechange = function() {
+  if (this.readyState == 4 && this.status == 200) {
+    HumidityNovember = JSON.parse(getHumidityNovember.responseText);
+    drawHumidityNovember();
+  }
+  else {
+      console.log(this.readyState, this.status);
+  }
+};
+getHumidityNovember.open('GET', '/HumidityNovember');
+getHumidityNovember.send();
+
+
+
+
+
+
+
+
+
+function drawHumidityDecember() {
+  for (var i=0; i <HumidityDecember.length; i++) {
+
+    // console.log('h: ' + Humidity[i][15]);
+    var humidity_line = document.getElementById('lines');
+    var humid = humidity_line.cloneNode(true);
+    humid.setAttribute('id', 'December');
+    translate = ((HumidityDecember[i][15])-70) + ',' + ((HumidityDecember[i][16])-20);
+    scale = Humidity[i][13] / ( Humidity[i][13] + 195);
+
+
+    humid.setAttribute('transform', 'translate('+translate+')' + ' scale('+scale+')');
+    humid.setAttribute('opacity', 0);
+
+
+
+    // text = document.getElementById('text' + Humidity[i][1]);
+    // text.querySelector('.info').innerHTML = Humidity[i][14];
+
+
+
+    document.getElementById('Humidity').appendChild(humid);
+  }
+}
+
+var getHumidityDecember = new XMLHttpRequest();
+getHumidityDecember.onreadystatechange = function() {
+  if (this.readyState == 4 && this.status == 200) {
+    HumidityDecember = JSON.parse(getHumidityDecember.responseText);
+    drawHumidityDecember();
+  }
+  else {
+      console.log(this.readyState, this.status);
+  }
+};
+getHumidityDecember.open('GET', '/HumidityDecember');
+getHumidityDecember.send();
+
+
+
+
+
+
 
 
 
 
 // sunshine
 
+
+
+
+
+
+
 sunshine = []
+sunshineNelson = []
+
+
+
 
 function drawSunshine() {
   for (var i=0; i <sunshine.length; i++) {
     var sun_circle = document.createElementNS('http://www.w3.org/2000/svg','circle')
-    sun_circle.setAttribute('class', 'nelson');
-    sun_circle.setAttribute('cx', sunshine[i][2]);
-    sun_circle.setAttribute('cy', sunshine[i][3]);
-    sun_circle.setAttribute('r', sunshine[i][4]/5);
+    sun_circle.setAttribute('id', 'sunshinethree');
+    sun_circle.setAttribute('cx', sunshine[i][15]);
+    sun_circle.setAttribute('cy', sunshine[i][16]);
+    sun_circle.setAttribute('r', sunshine[i][14]/60);
+    // sun_circle.setAttribute('opacity', 0.05);
     sun_circle.setAttribute('fill', 'none'); //
     sun_circle.setAttribute('stroke', '#f9ed40'); //
-    sun_circle.setAttribute('stroke-width', 10); //
+    sun_circle.setAttribute('stroke-width', sunshine[i][14]/80); //
     document.getElementById('sunshine').appendChild(sun_circle); //
   }
 }
 
 // fetches data
-var req = new XMLHttpRequest();
-req.onreadystatechange = function() {
+var getSunshine = new XMLHttpRequest();
+getSunshine.onreadystatechange = function() {
   if (this.readyState == 4 && this.status == 200) {
-    sunshine = JSON.parse(req.responseText);
+    sunshine = JSON.parse(getSunshine.responseText);
     drawSunshine();
   }
   else {
       console.log(this.readyState, this.status);
   }
 };
-req.open('GET', '/scores');
-req.send();
+getSunshine.open('GET', '/Sunshine');
+getSunshine.send();
 
 
 
+
+// Sunshine nelson
+
+// function drawSunshineNelson() {
+//   for (var i=0; i <sunshineNelson.length; i++) {
+//     var sun_circle = document.createElementNS('http://www.w3.org/2000/svg','circle')
+//     sun_circle.setAttribute('id', 'nelson');
+//     sun_circle.setAttribute('cx', sunshineNelson[i][15]);
+//     sun_circle.setAttribute('cy', sunshineNelson[i][16]);
+//     sun_circle.setAttribute('r', sunshineNelson[i][14]/45);
+//     sun_circle.setAttribute('fill', 'none'); //
+//     sun_circle.setAttribute('stroke', '#f9ed40'); //
+//     sun_circle.setAttribute('stroke-width', 16); //
+//     document.getElementById('sunshine').appendChild(sun_circle); //
+//   }
+// }
+//
+// // fetches data
+// var req = new XMLHttpRequest();
+// req.onreadystatechange = function() {
+//   if (this.readyState == 4 && this.status == 200) {
+//     sunshineNelson = JSON.parse(req.responseText);
+//     drawSunshineNelson();
+//   }
+//   else {
+//       console.log(this.readyState, this.status);
+//   }
+// };
+// req.open('GET', '/Nelson');
+// req.send();
+
+
+
+
+
+
+// Months
+
+
+
+
+sunshineJanruary = []
+sunshineFebruary = []
+sunshineMarch = []
+sunshineApril = []
+sunshineMay = []
+sunshineJune = []
+sunshineJuly = []
+sunshineAugust = []
+sunshineSeptember = []
+sunshineOctober = []
+sunshineNovember = []
+sunshineDecember = []
+// sunshineYear = []
+
+
+
+RainfallJanruary = []
+RainfallFebruary = []
+RainfallMarch = []
+RainfallApril = []
+RainfallMay = []
+RainfallJune = []
+RainfallJuly = []
+RainfallAugust = []
+RainfallSeptember = []
+RainfallOctober = []
+RainfallNovember = []
+RainfallDecember = []
+
+
+
+
+
+
+//January
+
+function drawsunshineJanruary() {
+  for (var i=0; i <sunshineJanruary.length; i++) {
+    var sun_circle = document.createElementNS('http://www.w3.org/2000/svg','circle')
+    sun_circle.setAttribute('id', 'Janruary');
+    sun_circle.setAttribute('class', 'sun');
+    sun_circle.setAttribute('cx', sunshineJanruary[i][15]);
+    sun_circle.setAttribute('cy', sunshineJanruary[i][16]);
+    sun_circle.setAttribute('r', sunshineJanruary[i][2]/8);
+    sun_circle.setAttribute('opacity', 0.05);
+    sun_circle.setAttribute('fill', 'none'); //
+    sun_circle.setAttribute('stroke', '#f9ed40'); //
+    sun_circle.setAttribute('stroke-width', 16); //
+    document.getElementById('sunshine').appendChild(sun_circle); //
+  }
+
+
+
+}
+
+// fetches data
+var get2 = new XMLHttpRequest();
+get2.onreadystatechange = function() {
+  if (this.readyState == 4 && this.status == 200) {
+    sunshineJanruary = JSON.parse(get2.responseText);
+    drawsunshineJanruary();
+  }
+  else {
+      console.log(this.readyState, this.status);
+  }
+};
+get2.open('GET', '/Janruary');
+get2.send();
+
+
+
+
+// February
+
+function drawsunshineFebruary() {
+  for (var i=0; i <sunshineFebruary.length; i++) {
+    var sun_circle = document.createElementNS('http://www.w3.org/2000/svg','circle')
+    sun_circle.setAttribute('id', 'February');
+    sun_circle.setAttribute('cx', sunshineFebruary[i][15]);
+    sun_circle.setAttribute('cy', sunshineFebruary[i][16]);
+    sun_circle.setAttribute('r', sunshineFebruary[i][3]/8);
+    sun_circle.setAttribute('opacity', 0.05);
+    sun_circle.setAttribute('fill', 'none'); //
+    sun_circle.setAttribute('stroke', '#f9ed40'); //
+    sun_circle.setAttribute('stroke-width', 16); //
+    document.getElementById('sunshine').appendChild(sun_circle); //
+  }
+
+
+}
+
+// fetches data
+var getFeb = new XMLHttpRequest();
+getFeb.onreadystatechange = function() {
+  if (this.readyState == 4 && this.status == 200) {
+    sunshineFebruary = JSON.parse(getFeb.responseText);
+    drawsunshineFebruary();
+  }
+  else {
+      console.log(this.readyState, this.status);
+  }
+};
+getFeb.open('GET', '/February');
+getFeb.send();
+
+
+
+//March
+
+
+function drawsunshineMarch() {
+  for (var i=0; i <sunshineMarch.length; i++) {
+    var sun_circle = document.createElementNS('http://www.w3.org/2000/svg','circle')
+    sun_circle.setAttribute('id', 'March');
+    sun_circle.setAttribute('cx', sunshineMarch[i][15]);
+    sun_circle.setAttribute('cy', sunshineMarch[i][16]);
+    sun_circle.setAttribute('r', sunshineMarch[i][4]/8);
+    sun_circle.setAttribute('opacity', 0.05);
+    sun_circle.setAttribute('fill', 'none'); //
+    sun_circle.setAttribute('stroke', '#f9ed40'); //
+    sun_circle.setAttribute('stroke-width', 16); //
+    document.getElementById('sunshine').appendChild(sun_circle); //
+  }
+}
+
+// fetches data
+var getMarch = new XMLHttpRequest();
+getMarch.onreadystatechange = function() {
+  if (this.readyState == 4 && this.status == 200) {
+    sunshineMarch = JSON.parse(getMarch.responseText);
+    drawsunshineMarch();
+  }
+  else {
+      console.log(this.readyState, this.status);
+  }
+};
+getMarch.open('GET', '/March');
+getMarch.send();
+
+
+
+
+function drawsunshineApril() {
+  for (var i=0; i <sunshineApril.length; i++) {
+    var sun_circle = document.createElementNS('http://www.w3.org/2000/svg','circle')
+    sun_circle.setAttribute('id', 'April');
+    sun_circle.setAttribute('cx', sunshineApril[i][15]);
+    sun_circle.setAttribute('cy', sunshineApril[i][16]);
+    sun_circle.setAttribute('r', sunshineApril[i][5]/8);
+    sun_circle.setAttribute('opacity', 0.05);
+    sun_circle.setAttribute('fill', 'none'); //
+    sun_circle.setAttribute('stroke', '#f9ed40'); //
+    sun_circle.setAttribute('stroke-width', 16); //
+    document.getElementById('sunshine').appendChild(sun_circle); //
+  }
+}
+
+// fetches data
+var getApril = new XMLHttpRequest();
+getApril.onreadystatechange = function() {
+  if (this.readyState == 4 && this.status == 200) {
+    sunshineApril = JSON.parse(getApril.responseText);
+    drawsunshineApril();
+  }
+  else {
+      console.log(this.readyState, this.status);
+  }
+};
+getApril.open('GET', '/April');
+getApril.send();
+
+
+
+
+
+//May
+
+function drawsunshineMay() {
+  for (var i=0; i <sunshineMay.length; i++) {
+    var sun_circle = document.createElementNS('http://www.w3.org/2000/svg','circle')
+    sun_circle.setAttribute('id', 'May');
+    sun_circle.setAttribute('cx', sunshineMay[i][15]);
+    sun_circle.setAttribute('cy', sunshineMay[i][16]);
+    sun_circle.setAttribute('r', sunshineMay[i][6]/8);
+    sun_circle.setAttribute('opacity', 0.05);
+    sun_circle.setAttribute('fill', 'none'); //
+    sun_circle.setAttribute('stroke', '#f9ed40'); //
+    sun_circle.setAttribute('stroke-width', 16); //
+    document.getElementById('sunshine').appendChild(sun_circle); //
+  }
+}
+
+// fetches data
+var getMay = new XMLHttpRequest();
+getMay.onreadystatechange = function() {
+  if (this.readyState == 4 && this.status == 200) {
+    sunshineMay = JSON.parse(getMay.responseText);
+    drawsunshineMay();
+  }
+  else {
+      console.log(this.readyState, this.status);
+  }
+};
+getMay.open('GET', '/May');
+getMay.send();
+
+
+
+
+//June
+
+function drawsunshineJune() {
+  for (var i=0; i <sunshineJune.length; i++) {
+    var sun_circle = document.createElementNS('http://www.w3.org/2000/svg','circle')
+    sun_circle.setAttribute('id', 'June');
+    sun_circle.setAttribute('cx', sunshineJune[i][15]);
+    sun_circle.setAttribute('cy', sunshineJune[i][16]);
+    sun_circle.setAttribute('r', sunshineJune[i][7]/8);
+    sun_circle.setAttribute('opacity', 0.05);
+    sun_circle.setAttribute('fill', 'none'); //
+    sun_circle.setAttribute('stroke', '#f9ed40'); //
+    sun_circle.setAttribute('stroke-width', 16); //
+    document.getElementById('sunshine').appendChild(sun_circle); //
+  }
+}
+
+// fetches data
+var getJune = new XMLHttpRequest();
+getJune.onreadystatechange = function() {
+  if (this.readyState == 4 && this.status == 200) {
+    sunshineJune = JSON.parse(getJune.responseText);
+    drawsunshineJune();
+  }
+  else {
+      console.log(this.readyState, this.status);
+  }
+};
+getJune.open('GET', '/June');
+getJune.send();
+
+
+
+
+
+//July
+
+function drawsunshineJuly() {
+  for (var i=0; i <sunshineJuly.length; i++) {
+    var sun_circle = document.createElementNS('http://www.w3.org/2000/svg','circle')
+    sun_circle.setAttribute('id', 'July');
+    sun_circle.setAttribute('cx', sunshineJuly[i][15]);
+    sun_circle.setAttribute('cy', sunshineJuly[i][16]);
+    sun_circle.setAttribute('r', sunshineJuly[i][8]/8);
+    sun_circle.setAttribute('opacity', 0.05);
+    sun_circle.setAttribute('fill', 'none'); //
+    sun_circle.setAttribute('stroke', '#f9ed40'); //
+    sun_circle.setAttribute('stroke-width', 16); //
+    document.getElementById('sunshine').appendChild(sun_circle); //
+  }
+}
+
+// fetches data
+var getJuly = new XMLHttpRequest();
+getJuly.onreadystatechange = function() {
+  if (this.readyState == 4 && this.status == 200) {
+    sunshineJuly = JSON.parse(getJuly.responseText);
+    drawsunshineJuly();
+  }
+  else {
+      console.log(this.readyState, this.status);
+  }
+};
+getJuly.open('GET', '/July');
+getJuly.send();
+
+
+
+
+//August
+
+function drawsunshineAugust() {
+  for (var i=0; i <sunshineAugust.length; i++) {
+    var sun_circle = document.createElementNS('http://www.w3.org/2000/svg','circle')
+    sun_circle.setAttribute('id', 'August');
+    sun_circle.setAttribute('cx', sunshineAugust[i][15]);
+    sun_circle.setAttribute('cy', sunshineAugust[i][16]);
+    sun_circle.setAttribute('r', sunshineAugust[i][9]/8);
+    sun_circle.setAttribute('opacity', 0.05);
+    sun_circle.setAttribute('fill', 'none'); //
+    sun_circle.setAttribute('stroke', '#f9ed40'); //
+    sun_circle.setAttribute('stroke-width', 16); //
+    document.getElementById('sunshine').appendChild(sun_circle); //
+  }
+}
+
+// fetches data
+var getAugust = new XMLHttpRequest();
+getAugust.onreadystatechange = function() {
+  if (this.readyState == 4 && this.status == 200) {
+    sunshineAugust = JSON.parse(getAugust.responseText);
+    drawsunshineAugust();
+  }
+  else {
+      console.log(this.readyState, this.status);
+  }
+};
+getAugust.open('GET', '/August');
+getAugust.send();
+
+
+
+
+//September
+
+function drawsunshineSeptember() {
+  for (var i=0; i <sunshineSeptember.length; i++) {
+    var sun_circle = document.createElementNS('http://www.w3.org/2000/svg','circle')
+    sun_circle.setAttribute('id', 'September');
+    sun_circle.setAttribute('cx', sunshineSeptember[i][15]);
+    sun_circle.setAttribute('cy', sunshineSeptember[i][16]);
+    sun_circle.setAttribute('r', sunshineSeptember[i][10]/8);
+    sun_circle.setAttribute('opacity', 0.05);
+    sun_circle.setAttribute('fill', 'none'); //
+    sun_circle.setAttribute('stroke', '#f9ed40'); //
+    sun_circle.setAttribute('stroke-width', 16); //
+    document.getElementById('sunshine').appendChild(sun_circle); //
+  }
+}
+
+// fetches data
+var getSeptember = new XMLHttpRequest();
+getSeptember.onreadystatechange = function() {
+  if (this.readyState == 4 && this.status == 200) {
+    sunshineSeptember = JSON.parse(getSeptember.responseText);
+    drawsunshineSeptember();
+  }
+  else {
+      console.log(this.readyState, this.status);
+  }
+};
+getSeptember.open('GET', '/September');
+getSeptember.send();
+
+
+
+
+
+
+//October
+
+function drawsunshineOctober() {
+  for (var i=0; i <sunshineOctober.length; i++) {
+    var sun_circle = document.createElementNS('http://www.w3.org/2000/svg','circle')
+    sun_circle.setAttribute('id', 'October');
+    sun_circle.setAttribute('cx', sunshineOctober[i][15]);
+    sun_circle.setAttribute('cy', sunshineOctober[i][16]);
+    sun_circle.setAttribute('r', sunshineOctober[11][8]/8);
+    sun_circle.setAttribute('opacity', 0.05);
+    sun_circle.setAttribute('fill', 'none'); //
+    sun_circle.setAttribute('stroke', '#f9ed40'); //
+    sun_circle.setAttribute('stroke-width', 16); //
+    document.getElementById('sunshine').appendChild(sun_circle); //
+  }
+}
+
+// fetches data
+var getOctober = new XMLHttpRequest();
+getOctober.onreadystatechange = function() {
+  if (this.readyState == 4 && this.status == 200) {
+    sunshineOctober = JSON.parse(getOctober.responseText);
+    drawsunshineOctober();
+  }
+  else {
+      console.log(this.readyState, this.status);
+  }
+};
+getOctober.open('GET', '/October');
+getOctober.send();
+
+
+
+
+//November
+
+function drawsunshineNovember() {
+  for (var i=0; i <sunshineNovember.length; i++) {
+    var sun_circle = document.createElementNS('http://www.w3.org/2000/svg','circle')
+    sun_circle.setAttribute('id', 'November');
+    sun_circle.setAttribute('cx', sunshineNovember[i][15]);
+    sun_circle.setAttribute('cy', sunshineNovember[i][16]);
+    sun_circle.setAttribute('r', sunshineNovember[i][12]/8);
+    sun_circle.setAttribute('opacity', 0.05);
+    sun_circle.setAttribute('fill', 'none'); //
+    sun_circle.setAttribute('stroke', '#f9ed40'); //
+    sun_circle.setAttribute('stroke-width', 16); //
+    document.getElementById('sunshine').appendChild(sun_circle); //
+  }
+}
+
+// fetches data
+var getNovember = new XMLHttpRequest();
+getNovember.onreadystatechange = function() {
+  if (this.readyState == 4 && this.status == 200) {
+    sunshineNovember = JSON.parse(getNovember.responseText);
+    drawsunshineNovember();
+  }
+  else {
+      console.log(this.readyState, this.status);
+  }
+};
+getNovember.open('GET', '/November');
+getNovember.send();
+
+
+
+
+
+//December
+
+function drawsunshineDecember() {
+  for (var i=0; i <sunshineDecember.length; i++) {
+    var sun_circle = document.createElementNS('http://www.w3.org/2000/svg','circle')
+    sun_circle.setAttribute('id', 'December');
+    sun_circle.setAttribute('cx', sunshineDecember[i][15]);
+    sun_circle.setAttribute('cy', sunshineDecember[i][16]);
+    sun_circle.setAttribute('r', sunshineDecember[i][13]/8);
+    sun_circle.setAttribute('opacity', 0.05);
+    sun_circle.setAttribute('fill', 'none'); //
+    sun_circle.setAttribute('stroke', '#f9ed40'); //
+    sun_circle.setAttribute('stroke-width', 16); //
+    document.getElementById('sunshine').appendChild(sun_circle); //
+  }
+}
+
+// fetches data
+var getDecember = new XMLHttpRequest();
+getDecember.onreadystatechange = function() {
+  if (this.readyState == 4 && this.status == 200) {
+    sunshineDecember = JSON.parse(getDecember.responseText);
+    drawsunshineDecember();
+  }
+  else {
+      console.log(this.readyState, this.status);
+  }
+};
+getDecember.open('GET', '/December');
+getDecember.send();
+
+
+
+
+
+
+
+// Rainfall
+
+
+
+
+
+
+
+Rainfall = []
+
+
+
+
+
+function drawRain() {
+  for (var x=0; x <Rainfall.length; x++) {
+    var r_rect = document.createElementNS('http://www.w3.org/2000/svg','rect')
+    r_rect.setAttribute('id', 'rainfall');
+    r_rect.setAttribute('x', Rainfall[x][15]-((Rainfall[x][14]/20)/2));
+    r_rect.setAttribute('y', Rainfall[x][16]-((Rainfall[x][14]/20)/2));
+    r_rect.setAttribute('width', Rainfall[x][14]/20);
+    r_rect.setAttribute('height', Rainfall[x][14]/20);
+    r_rect.setAttribute('fill', 'none');
+    r_rect.setAttribute('stroke', '#315f87');
+    // r_rect.setAttribute('stroke', 'red');
+    r_rect.setAttribute('stroke-width', Rainfall[x][14]/90);
+    document.getElementById('rain').appendChild(r_rect);
+
+
+  }
+}
+
+// fetches data
+var get = new XMLHttpRequest();
+get.onreadystatechange = function() {
+  if (this.readyState == 4 && this.status == 200) {
+    Rainfall = JSON.parse(get.responseText);
+    drawRain();
+  }
+  else {
+      console.log(this.readyState, this.status);
+  }
+};
+get.open('GET', '/Rainfall');
+// req.open('GET', '/Sunshine');
+get.send();
+
+
+
+
+
+
+
+function drawRainJanruary() {
+  for (var x=0; x <RainfallJanruary.length; x++) {
+    var r_rect = document.createElementNS('http://www.w3.org/2000/svg','rect')
+    r_rect.setAttribute('id', 'Janruary');
+    r_rect.setAttribute('x', RainfallJanruary[x][15]-((RainfallJanruary[x][2]/5)/2));
+    r_rect.setAttribute('y', RainfallJanruary[x][16]-((RainfallJanruary[x][2]/5)/2));
+    r_rect.setAttribute('width', RainfallJanruary[x][2]/5);
+    r_rect.setAttribute('height', RainfallJanruary[x][2]/5);
+    r_rect.setAttribute('fill', 'none');
+    r_rect.setAttribute('opacity', 0.05);
+    r_rect.setAttribute('stroke', '#315f87');
+    r_rect.setAttribute('stroke-width', 14);
+    document.getElementById('rain').appendChild(r_rect);
+
+
+  }
+}
+
+// fetches data
+var rainJan = new XMLHttpRequest();
+rainJan.onreadystatechange = function() {
+  if (this.readyState == 4 && this.status == 200) {
+    RainfallJanruary = JSON.parse(rainJan.responseText);
+    drawRainJanruary();
+  }
+  else {
+      console.log(this.readyState, this.status);
+  }
+};
+rainJan.open('GET', '/RJ');
+// req.open('GET', '/Sunshine');
+rainJan.send();
+
+
+
+function drawRainFebruary() {
+  for (var x=0; x <RainfallFebruary.length; x++) {
+    var r_rect = document.createElementNS('http://www.w3.org/2000/svg','rect')
+    r_rect.setAttribute('id', 'February');
+    r_rect.setAttribute('x', RainfallFebruary[x][15]-((RainfallFebruary[x][3]/5)/2));
+    r_rect.setAttribute('y', RainfallFebruary[x][16]-((RainfallFebruary[x][3]/5)/2));
+    r_rect.setAttribute('width', RainfallFebruary[x][3]/5);
+    r_rect.setAttribute('height', RainfallFebruary[x][3]/5);
+    r_rect.setAttribute('fill', 'none');
+    r_rect.setAttribute('opacity', 0.05);
+    r_rect.setAttribute('stroke', '#315f87');
+    r_rect.setAttribute('stroke-width', 14);
+    document.getElementById('rain').appendChild(r_rect);
+
+
+  }
+}
+
+// fetches data
+var rainFeb = new XMLHttpRequest();
+rainFeb.onreadystatechange = function() {
+  if (this.readyState == 4 && this.status == 200) {
+    RainfallFebruary = JSON.parse(rainFeb.responseText);
+    drawRainFebruary();
+  }
+  else {
+      console.log(this.readyState, this.status);
+  }
+};
+rainFeb.open('GET', '/RF');
+// req.open('GET', '/Sunshine');
+rainFeb.send();
+
+
+
+
+
+
+function drawRainfallMarch() {
+  for (var x=0; x <RainfallMarch.length; x++) {
+    var r_rect = document.createElementNS('http://www.w3.org/2000/svg','rect')
+    r_rect.setAttribute('id', 'March');
+    r_rect.setAttribute('x', RainfallMarch[x][15]-((RainfallMarch[x][4]/5)/1.6));
+    r_rect.setAttribute('y', RainfallMarch[x][16]-((RainfallMarch[x][4]/5)/1.7));
+    r_rect.setAttribute('width', RainfallMarch[x][4]/5);
+    r_rect.setAttribute('height', RainfallMarch[x][4]/5);
+    r_rect.setAttribute('fill', 'none');
+    r_rect.setAttribute('opacity', 0.05);
+    r_rect.setAttribute('stroke', '#315f87');
+    r_rect.setAttribute('stroke-width', 14);
+    document.getElementById('rain').appendChild(r_rect);
+
+
+  }
+}
+
+// fetches data
+var rainMarch = new XMLHttpRequest();
+rainMarch.onreadystatechange = function() {
+  if (this.readyState == 4 && this.status == 200) {
+    RainfallMarch = JSON.parse(rainMarch.responseText);
+    drawRainfallMarch();
+  }
+  else {
+      console.log(this.readyState, this.status);
+  }
+};
+rainMarch.open('GET', '/RM');
+// req.open('GET', '/Sunshine');
+rainMarch.send();
+
+
+
+
+function drawRainfallApril() {
+  for (var x=0; x <RainfallApril.length; x++) {
+    var r_rect = document.createElementNS('http://www.w3.org/2000/svg','rect')
+    r_rect.setAttribute('id', 'April');
+    r_rect.setAttribute('x', RainfallApril[x][15]-((RainfallApril[x][5]/5)/1.8));
+    r_rect.setAttribute('y', RainfallApril[x][16]-((RainfallApril[x][5]/5)/1.7));
+    r_rect.setAttribute('width', RainfallApril[x][5]/5);
+    r_rect.setAttribute('height', RainfallApril[x][5]/5);
+    r_rect.setAttribute('fill', 'none');
+    r_rect.setAttribute('opacity', 0.05);
+    r_rect.setAttribute('stroke', '#315f87');
+    r_rect.setAttribute('stroke-width', 14);
+    document.getElementById('rain').appendChild(r_rect);
+
+
+  }
+}
+
+// fetches data
+var rainApril = new XMLHttpRequest();
+rainApril.onreadystatechange = function() {
+  if (this.readyState == 4 && this.status == 200) {
+    RainfallApril = JSON.parse(rainApril.responseText);
+    drawRainfallApril();
+  }
+  else {
+      console.log(this.readyState, this.status);
+  }
+};
+rainApril.open('GET', '/RA');
+// req.open('GET', '/Sunshine');
+rainApril.send();
+
+
+
+
+
+function drawRainfallMay() {
+  for (var x=0; x <RainfallMay.length; x++) {
+    var r_rect = document.createElementNS('http://www.w3.org/2000/svg','rect')
+    r_rect.setAttribute('id', 'May');
+    r_rect.setAttribute('x', RainfallMay[x][15]-((RainfallMay[x][6]/5)/1.3));
+    r_rect.setAttribute('y', RainfallMay[x][16]-((RainfallMay[x][6]/5)/1.3));
+    r_rect.setAttribute('width', RainfallMay[x][6]/5);
+    r_rect.setAttribute('height', RainfallMay[x][6]/5);
+    r_rect.setAttribute('fill', 'none');
+    r_rect.setAttribute('opacity', 0.05);
+    r_rect.setAttribute('stroke', '#315f87');
+    r_rect.setAttribute('stroke-width', 14);
+    document.getElementById('rain').appendChild(r_rect);
+
+
+  }
+}
+
+// fetches data
+var rainMay = new XMLHttpRequest();
+rainMay.onreadystatechange = function() {
+  if (this.readyState == 4 && this.status == 200) {
+    RainfallMay = JSON.parse(rainMay.responseText);
+    drawRainfallMay();
+  }
+  else {
+      console.log(this.readyState, this.status);
+  }
+};
+rainMay.open('GET', '/RMa');
+// req.open('GET', '/Sunshine');
+rainMay.send();
+
+
+
+
+function drawRainfallJune() {
+  for (var x=0; x <RainfallJune.length; x++) {
+    var r_rect = document.createElementNS('http://www.w3.org/2000/svg','rect')
+    r_rect.setAttribute('id', 'June');
+    r_rect.setAttribute('x', RainfallJune[x][15]-((RainfallJune[x][7]/5)/1.6));
+    r_rect.setAttribute('y', RainfallJune[x][16]-((RainfallJune[x][7]/5)/1.6));
+    r_rect.setAttribute('width', RainfallJune[x][7]/5);
+    r_rect.setAttribute('height', RainfallJune[x][7]/5);
+    r_rect.setAttribute('fill', 'none');
+    r_rect.setAttribute('opacity', 0.05);
+    r_rect.setAttribute('stroke', '#315f87');
+    r_rect.setAttribute('stroke-width', 14);
+    document.getElementById('rain').appendChild(r_rect);
+
+
+  }
+}
+
+// fetches data
+var rainJune = new XMLHttpRequest();
+rainJune.onreadystatechange = function() {
+  if (this.readyState == 4 && this.status == 200) {
+    RainfallJune = JSON.parse(rainJune.responseText);
+    drawRainfallJune();
+  }
+  else {
+      console.log(this.readyState, this.status);
+  }
+};
+rainJune.open('GET', '/RJUN');
+// req.open('GET', '/Sunshine');
+rainJune.send();
+
+
+
+
+
+
+
+
+
+
+
+function drawRainfallJuly() {
+  for (var x=0; x <RainfallJuly.length; x++) {
+    var r_rect = document.createElementNS('http://www.w3.org/2000/svg','rect')
+    r_rect.setAttribute('id', 'July');
+    r_rect.setAttribute('x', RainfallJuly[x][15]-((RainfallJuly[x][8]/5)/1.9));
+    r_rect.setAttribute('y', RainfallJuly[x][16]-((RainfallJuly[x][8]/5)/1.9));
+    r_rect.setAttribute('width', RainfallJuly[x][8]/5);
+    r_rect.setAttribute('height', RainfallJuly[x][8]/5);
+    r_rect.setAttribute('fill', 'none');
+    r_rect.setAttribute('opacity', 0.05);
+    r_rect.setAttribute('stroke', '#315f87');
+    r_rect.setAttribute('stroke-width', 14);
+    document.getElementById('rain').appendChild(r_rect);
+
+
+  }
+}
+
+// fetches data
+var rainJuly = new XMLHttpRequest();
+rainJuly.onreadystatechange = function() {
+  if (this.readyState == 4 && this.status == 200) {
+    RainfallJuly = JSON.parse(rainJuly.responseText);
+    drawRainfallJuly();
+  }
+  else {
+      console.log(this.readyState, this.status);
+  }
+};
+rainJuly.open('GET', '/RJUL');
+// req.open('GET', '/Sunshine');
+rainJuly.send();
+
+
+
+
+
+
+
+function drawRainfallAugust() {
+  for (var x=0; x <RainfallAugust.length; x++) {
+    var r_rect = document.createElementNS('http://www.w3.org/2000/svg','rect')
+    r_rect.setAttribute('id', 'August');
+    r_rect.setAttribute('x', RainfallAugust[x][15]-((RainfallAugust[x][9]/5)/2));
+    r_rect.setAttribute('y', RainfallAugust[x][16]-((RainfallAugust[x][9]/5)/2));
+    r_rect.setAttribute('width', RainfallAugust[x][9]/5);
+    r_rect.setAttribute('height', RainfallAugust[x][9]/5);
+    r_rect.setAttribute('fill', 'none');
+    r_rect.setAttribute('opacity', 0.05);
+    r_rect.setAttribute('stroke', '#315f87');
+    r_rect.setAttribute('stroke-width', 14);
+    document.getElementById('rain').appendChild(r_rect);
+
+
+  }
+}
+
+// fetches data
+var rainAugust = new XMLHttpRequest();
+rainAugust.onreadystatechange = function() {
+  if (this.readyState == 4 && this.status == 200) {
+    RainfallAugust = JSON.parse(rainAugust.responseText);
+    drawRainfallAugust();
+  }
+  else {
+      console.log(this.readyState, this.status);
+  }
+};
+rainAugust.open('GET', '/RAUG');
+// req.open('GET', '/Sunshine');
+rainAugust.send();
+
+
+
+
+
+
+
+
+
+function drawRainfallSeptember() {
+  for (var x=0; x <RainfallSeptember.length; x++) {
+    var r_rect = document.createElementNS('http://www.w3.org/2000/svg','rect')
+    r_rect.setAttribute('id', 'September');
+    r_rect.setAttribute('x', RainfallSeptember[x][15]-((RainfallSeptember[x][10]/5)/2));
+    r_rect.setAttribute('y', RainfallSeptember[x][16]-((RainfallSeptember[x][10]/5)/2));
+    r_rect.setAttribute('width', RainfallSeptember[x][10]/5);
+    r_rect.setAttribute('height', RainfallSeptember[x][10]/5);
+    r_rect.setAttribute('fill', 'none');
+    r_rect.setAttribute('opacity', 0.05);
+    r_rect.setAttribute('stroke', '#315f87');
+    r_rect.setAttribute('stroke-width', 14);
+    document.getElementById('rain').appendChild(r_rect);
+
+
+  }
+}
+
+// fetches data
+var rainSeptember = new XMLHttpRequest();
+rainSeptember.onreadystatechange = function() {
+  if (this.readyState == 4 && this.status == 200) {
+    RainfallSeptember = JSON.parse(rainSeptember.responseText);
+    drawRainfallSeptember();
+  }
+  else {
+      console.log(this.readyState, this.status);
+  }
+};
+rainSeptember.open('GET', '/RS');
+// req.open('GET', '/Sunshine');
+rainSeptember.send();
+
+// Rainfall_list
+
+
+
+function drawRainfallOctober() {
+  for (var x=0; x <RainfallOctober.length; x++) {
+    var r_rect = document.createElementNS('http://www.w3.org/2000/svg','rect')
+    r_rect.setAttribute('id', 'October');
+    r_rect.setAttribute('x', RainfallOctober[x][15]-((RainfallOctober[x][11]/5)/2));
+    r_rect.setAttribute('y', RainfallOctober[x][16]-((RainfallOctober[x][11]/5)/2));
+    r_rect.setAttribute('width', RainfallOctober[x][11]/5);
+    r_rect.setAttribute('height', RainfallOctober[x][11]/5);
+    r_rect.setAttribute('fill', 'none');
+    r_rect.setAttribute('opacity', 0.05);
+    r_rect.setAttribute('stroke', '#315f87');
+    r_rect.setAttribute('stroke-width', 14);
+    document.getElementById('rain').appendChild(r_rect);
+
+
+  }
+}
+
+// fetches data
+var rainOctober = new XMLHttpRequest();
+rainOctober.onreadystatechange = function() {
+  if (this.readyState == 4 && this.status == 200) {
+    RainfallOctober = JSON.parse(rainOctober.responseText);
+    drawRainfallOctober();
+  }
+  else {
+      console.log(this.readyState, this.status);
+  }
+};
+rainOctober.open('GET', '/RO');
+// req.open('GET', '/Sunshine');
+rainOctober.send();
+
+
+
+
+
+
+function drawRainfallNovember() {
+  for (var x=0; x <RainfallNovember.length; x++) {
+    var r_rect = document.createElementNS('http://www.w3.org/2000/svg','rect')
+    r_rect.setAttribute('id', 'November');
+    r_rect.setAttribute('x', RainfallNovember[x][15]-((RainfallNovember[x][12]/5)/2));
+    r_rect.setAttribute('y', RainfallNovember[x][16]-((RainfallNovember[x][12]/5)/2));
+    r_rect.setAttribute('width', RainfallNovember[x][12]/5);
+    r_rect.setAttribute('height', RainfallNovember[x][12]/5);
+    r_rect.setAttribute('fill', 'none');
+    r_rect.setAttribute('opacity', 0.05);
+    r_rect.setAttribute('stroke', '#315f87');
+    r_rect.setAttribute('stroke-width', 14);
+    document.getElementById('rain').appendChild(r_rect);
+
+
+  }
+}
+
+// fetches data
+var rainNovember = new XMLHttpRequest();
+rainNovember.onreadystatechange = function() {
+  if (this.readyState == 4 && this.status == 200) {
+    RainfallNovember = JSON.parse(rainNovember.responseText);
+    drawRainfallNovember();
+  }
+  else {
+      console.log(this.readyState, this.status);
+  }
+};
+rainNovember.open('GET', '/RN');
+// req.open('GET', '/Sunshine');
+rainNovember.send();
+
+
+
+
+
+
+
+function drawRainfallDecember() {
+  for (var x=0; x <RainfallDecember.length; x++) {
+    var r_rect = document.createElementNS('http://www.w3.org/2000/svg','rect')
+    r_rect.setAttribute('id', 'December');
+    r_rect.setAttribute('x', RainfallDecember[x][15]-((RainfallDecember[x][13]/5)/2));
+    r_rect.setAttribute('y', RainfallDecember[x][16]-((RainfallDecember[x][13]/5)/2));
+    r_rect.setAttribute('width', RainfallDecember[x][13]/5);
+    r_rect.setAttribute('height', RainfallDecember[x][13]/5);
+    r_rect.setAttribute('fill', 'none');
+    r_rect.setAttribute('opacity', 0.05);
+    r_rect.setAttribute('stroke', '#315f87');
+    r_rect.setAttribute('stroke-width', 14);
+    document.getElementById('rain').appendChild(r_rect);
+
+
+  }
+}
+
+// fetches data
+var rainDecember = new XMLHttpRequest();
+rainDecember.onreadystatechange = function() {
+  if (this.readyState == 4 && this.status == 200) {
+    RainfallDecember = JSON.parse(rainDecember.responseText);
+    drawRainfallDecember();
+  }
+  else {
+      console.log(this.readyState, this.status);
+  }
+};
+rainDecember.open('GET', '/RD');
+// req.open('GET', '/Sunshine');
+rainDecember.send();
 
 
 /*
@@ -748,7 +3328,7 @@ document.getElementById('sunshine').appendChild(sun_circle);
 
 // Rain
 
-
+/*
 
 
   var r_rect = document.createElementNS('http://www.w3.org/2000/svg','rect')
@@ -1045,7 +3625,7 @@ document.getElementById('sunshine').appendChild(sun_circle);
 
 
 
-
+*/
 
 
 </script>
